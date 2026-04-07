@@ -152,5 +152,82 @@ export const skillsContent = {
         ]
       }
     ]
+  },
+  uz: {
+    metaTitle: 'Ko\'nikmalar - Vladimir Belov',
+    metaDescription:
+      'Vladimir Belovning tahlil, arxitektura, texnologiyalar, loyiha ishlari va qo\'shimcha biznes sohalari bo\'yicha ko\'nikmalari va kompetensiyalari.',
+    title: 'Ko\'nikmalar va kompetensiyalar',
+    description:
+      'Rezyume asosida tahliliy, arxitektura, texnik va loyiha kompetensiyalarining tuzilgan ko\'rinishi.',
+    categories: [
+      {
+        name: 'Tahlil',
+        skills: [
+          'Talablarni ishlab chiqish',
+          'Biznes tahlili',
+          'Tizim tahlili',
+          'Axborot xavfsizligi tahlili',
+          'BPMN',
+          'UML',
+          'ERD',
+          'CJM'
+        ]
+      },
+      {
+        name: 'Arxitektura',
+        skills: [
+          'TOGAF',
+          'C4',
+          'ArchiMate',
+          'Sparx Enterprise Architect',
+          'Domain-Driven Design',
+          'Integratsiya arxitekturasi',
+          'API loyihalash'
+        ]
+      },
+      {
+        name: 'Texnologiyalar',
+        skills: [
+          'Python',
+          'JavaScript',
+          'C#',
+          'VBA',
+          '1C 8.3',
+          'PostgreSQL',
+          'MS SQL',
+          'REST API',
+          'SOAP',
+          'Docker',
+          'Apache Kafka'
+        ]
+      },
+      {
+        name: 'Loyiha ishlari',
+        skills: [
+          'PMBOK',
+          'Agile',
+          'Scrum',
+          'Waterfall',
+          'MS Project',
+          'Oracle Primavera',
+          'Jira',
+          'Confluence',
+          'Redmine'
+        ]
+      },
+      {
+        name: 'Qo\'shimcha bilimlar',
+        skills: [
+          'Risklar boshqaruvi',
+          'BABOK',
+          'BPM CBOK',
+          'Buxgalteriya hisobi',
+          'Xarajatlarni boshqarish',
+          'Texnik hujjatlar',
+          'Jamoalarni o\'qitish'
+        ]
+      }
+    ]
   }
 };

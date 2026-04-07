@@ -15,7 +15,8 @@ export default {
   },
   locales: {
     en: 'EN',
-    ru: 'RU'
+    ru: 'RU',
+    uz: 'UZ'
   },
   footer: {
     rightsReserved: 'All rights reserved.',

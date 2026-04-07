@@ -66,6 +66,29 @@ export const portfolioPageContent = {
       technologies: 'Технологии',
       outcome: 'Результаты'
     }
+  },
+  uz: {
+    metaTitle: 'Portfolio - Vladimir Belov',
+    metaDescription:
+      'Vladimir Belovning telekommunikatsiya, fintech, sanoat qurilishi va neft-gaz sohalaridagi tanlangan keyslari: antifraud, servis dizayni, injiniring loyihalarini boshqarish, ATM rozilik imzolash va xaridlar tizimlari.',
+    title: 'Portfolio',
+    description:
+      'Telekommunikatsiya, fintech va sanoat qurilishi bo\'yicha talablar, tahliliy artefaktlar, arxitektura va loyiha hujjatlariga yo\'naltirilgan tanlangan keyslar.',
+    menuTitle: 'Loyihalar',
+    sectors: {
+      all: 'Barchasi',
+      telecom: 'Telekommunikatsiya',
+      fintech: 'Fintech',
+      construction: 'Qurilish',
+      'oil-gas': 'Neft va gaz',
+      other: 'Modellashtirish vositalari'
+    },
+    sections: {
+      description: 'Loyiha tavsifi',
+      preparedArtifacts: 'Artefaktlar',
+      technologies: 'Texnologiyalar',
+      outcome: 'Natijalar'
+    }
   }
 };
 
@@ -559,6 +582,252 @@ export const portfolioCases = {
       outcome: [
         'Реализован локальный инструмент для моделирования BPMN-процессов и ER-диаграмм.',
         'Объединена работа с процессными и дата-моделями в одном рабочем пространстве без серверной инфраструктуры.'
+      ]
+    }
+  ],
+  uz: [
+    {
+      id: 'fraud-detection',
+      sectors: ['telecom'],
+      title: 'Firibgarlikni aniqlash',
+      company: 'Alfa-Mobile',
+      role: 'Axborot xavfsizligi yo\'nalishi tahlilchisi',
+      contextLine: 'Alfa-Mobile · Tizimli va biznes-tahlil · Antifraud',
+      summary:
+        'MVNO operatsiyalari va bank firibgarlikka qarshi tizimi kesishmasida telekommunikatsiya antifraud tashabbusi uchun tahliliy artefaktlar va talablar tayyorlandi: firibgarlik stsenariylari, biznes uchun muhim hodisalar, aniqlash mantiqi va xavflarni kamaytirish choralari.',
+      preparedArtifacts: [
+        'Beshta anomaliya guruhi bo\'yicha tasniflangan firibgarlik stsenariylari reestri: xulq-atvor, moliyaviy, kontekstual, texnik va mijozlarga oid.',
+        'Firibgarlikni monitoring qilish uchun aniqlash ko\'rsatkichlari, chegara qiymatlari va hisoblash yondashuvlari.',
+        'MVNO va bank firibgarlikka qarshi tizimi integratsiyasi uchun biznes uchun muhim hodisalar, ma\'lumot manbalari va boshqaruv harakatlari.',
+        'AI firibgarlikni aniqlash stsenariylari va antifraud tizimiga qo\'yiladigan talablar.'
+      ],
+      technologies: ['Kafka', 'SS7', 'OCS Forward Fusion', 'DMS', 'IBM DataPower', 'SMS Center', 'REST'],
+      outcome: [
+        'Antifraud tizimi ishlab chiqildi va joriy etildi.',
+        'Bank firibgarlikka qarshi tizimi bilan integratsiya amalga oshirildi.',
+        'Mijozlar va kompaniya uchun firibgarlik xavflari kamaytirildi.'
+      ]
+    },
+    {
+      id: 'ai-voice-assistant',
+      sectors: ['telecom'],
+      title: 'AI ovozli yordamchi',
+      company: 'Alfa-Mobile',
+      role: 'Axborot xavfsizligi yo\'nalishi tahlilchisi',
+      contextLine: 'Alfa-Mobile · Tizimli va biznes-tahlil · Antifraud',
+      summary:
+        'Abonentlar bilan muloqot qilish uchun AI ovozli yordamchiga talablar tayyorlandi, xizmat stsenariylari va yechimni keyingi loyihalash uchun zarur tahliliy artefaktlarga e\'tibor qaratildi.',
+      preparedArtifacts: [
+        'Funksional talablar.',
+        'Nofunksional talablar.',
+        'Mijoz sayohati xaritalari (CJM).',
+        'Xizmat stsenariylari uchun BPMN diagrammalari.'
+      ],
+      technologies: ['Just AI', 'Kafka', 'Keycloak', 'S3 MinIO', 'IBM DataPower', 'PostgreSQL', 'MongoDB', 'REST'],
+      outcome: [
+        'Abonentlar bilan muloqot qilish uchun AI ovozli yordamchi joriy etildi.'
+      ]
+    },
+    {
+      id: 'notification-service',
+      sectors: ['telecom'],
+      title: 'Bildirishnoma xizmati',
+      company: 'Alfa-Mobile',
+      role: 'Axborot xavfsizligi yo\'nalishi tahlilchisi',
+      contextLine: 'Alfa-Mobile · Tizimli va biznes-tahlil · Antifraud',
+      summary:
+        'Bildirishnoma xizmati uchun tahliliy artefaktlar tayyorlandi, kommunikatsiya stsenariylari, API tavsifi va yuqori darajadagi arxitektura chegaralariga e\'tibor qaratildi.',
+      preparedArtifacts: [
+        'Funksional talablar.',
+        'BPMN diagrammalari.',
+        'REST API spetsifikatsiyasi.',
+        'C4 Level 1 arxitektura artefaktlari.'
+      ],
+      technologies: ['REST API', 'Go', 'Kafka', 'PostgreSQL', 'MongoDB', 'Microservices'],
+      outcome: [
+        'Bildirishnoma xizmati ishlab chiqildi va joriy etildi.',
+        'Barcha bildirishnomalar ushbu xizmat orqali amalga oshiriladi.'
+      ]
+    },
+    {
+      id: 'atm-consent-signing',
+      sectors: ['fintech'],
+      title: 'ATMda rozilik imzolash',
+      company: 'Innotech',
+      role: 'Yetakchi tizim tahlilchisi',
+      contextLine: 'Innotech · Tizimli va biznes-tahlil · Fintech',
+      summary:
+        'ATMlarda kredit byurosi va tegishli roziliklarni imzolash uchun to\'liq tahliliy paket tayyorlandi: biznes asoslash, talablar, API dizayni, ma\'lumotlar modeli va xavflar tahlilini qamrab oladi.',
+      preparedArtifacts: [
+        'Biznes-keys va iqtisodiy samaralar.',
+        'Biznes, funksional, nofunksional va integratsiya talablari.',
+        'REST API dizayni va ma\'lumotlar modeli artefaktlari, jumladan klass va ER diagrammalari.',
+        'Moliyaviy ta\'sir hisob-kitobi, xavflarni kamaytirish choralari, CJM va MVP chegaralari bilan xavflar tavsifi.'
+      ],
+      technologies: ['REST API', 'Java EE', 'PostgreSQL', 'Microservices'],
+      outcome: [
+        'ATMlarda kredit byurosi va tegishli roziliklarni imzolash joriy etildi.',
+        'Bank mijozlariga kredit berish yaxshilandi.'
+      ]
+    },
+    {
+      id: 'engineering-project-management',
+      sectors: ['construction'],
+      title: 'Injiniring loyihalarini boshqarish',
+      company: 'Mosinzhproekt',
+      role: 'Bosh mutaxassis',
+      contextLine: 'Mosinzhproekt · Tizimli tahlil · Qurilish',
+      summary:
+        'Injiniring loyihalarini boshqarish axborot tizimi uchun maqsadli biznes arxitektura va talablar ishlab chiqildi. Tizimning asosiy bloklari: shartnomalar va loyiha xarajatlarini boshqarish, BDR/BDDS byudjetlashtirish, loyihalar portfelini boshqarish, injiniring ma\'lumotlari va hujjatlar chiqarishni nazorat qilish, resurslarni boshqarish, kalendar-tarmoq grafiklari va Oracle Primavera integratsiyasi.',
+      preparedArtifacts: [
+        'Maqsadli biznes-jarayonlar.',
+        'Rollar modeli.',
+        'Ma\'lumotlar modeli.',
+        'Axborot tizimiga funksional talablar.',
+        'Sinov dasturi va metodikasi.',
+        'Joriy etish metodikasi.'
+      ],
+      technologies: ['Oracle Primavera', '1C PM'],
+      outcome: [
+        'Injiniring loyihalarini boshqarish va texnik hujjat aylanish tizimi joriy etildi.',
+        'Shartnomalar, byudjetlar, injiniring ma\'lumotlari, resurslarni boshqarish va Oracle Primavera integratsiyasi modullari amalga oshirildi.'
+      ]
+    },
+    {
+      id: 'engineering-management-oil-gas',
+      sectors: ['construction', 'oil-gas'],
+      title: 'Sanoat qurilishida injiniring loyihalarini boshqarish (neft va gaz)',
+      company: 'NIPIGAZ',
+      role: 'Axborot tizimlari arxitektori',
+      sectorLabel: 'Neft-gaz va qurilish',
+      contextLine: 'NIPIGAZ · Neft-gaz va qurilish',
+      summary:
+        'Neft-gaz qurilishi uchun injiniring loyihalarini boshqarish tizimi arxitekturasi ishlab chiqildi. Loyiha maqsadlari: qurilish ishlarining kechikish sabablarini aniqlash, yagona bog\'langan grafik orqali rejalashtirish aniqligini oshirish (loyiha hujjatlari, yetkazib berish, qurilish), uzluksiz rejalashtirish uchun yagona materiallar va jihozlar bazasini yaratish, shartnoma majburiyatlari nazoratini yaxshilash, BDR/BDDS aniqligini oshirish va kassa uzilishlarini aniqlash.',
+      preparedArtifacts: [
+        'Funksional talablar.',
+        'Tizim arxitekturasi.',
+        'Integratsiya talablari.',
+        'Sinov dasturi va metodikasi.'
+      ],
+      technologies: ['Oracle Primavera', '1C Accounting', '1C UH', '1C ERP', 'AVEVA PDMS', 'CAD systems', 'SOAP', 'MS SQL'],
+      outcome: [
+        'Injiniring loyihalarini boshqarish tizimi joriy etildi, rejalashtirish, byudjetlashtirish, g\'aznachilik, NSI boshqarish, shartnomalar, dalolatnomalar va qo\'shni tizimlar bilan integratsiyalar amalga oshirildi.'
+      ]
+    },
+    {
+      id: 'unified-information-space',
+      sectors: ['construction', 'oil-gas'],
+      title: 'Loyiha instituti uchun yagona axborot maydoni',
+      company: 'VNIPIneft',
+      role: 'Bo\'lim rahbari',
+      sectorLabel: 'Neft-gaz va qurilish',
+      contextLine: 'VNIPIneft · Neft-gaz va qurilish',
+      summary:
+        'Birinchi va ikkinchi darajali jarayonlar hamda joriy axborot landshafti tahlil qilindi. Asosiy muammolar aniqlandi: turli tizimlarda funksiyalar va ma\'lumotlarning takrorlanishi, ko\'p sonli turli xil axborot tizimlari, ziddiyatli ma\'lumotlar va takroriy hisobotlar. Jarayonlarni optimallashtirish va reinjiniring choralari, shuningdek loyiha instituti uchun yagona axborot maydonini yaratish strategiyasi taklif etildi.',
+      preparedArtifacts: [
+        'Loyiha maqsadlari va ustavi.',
+        'Byudjet modeli.',
+        'Tizim arxitekturasi.',
+        'Biznes, funksional va nofunksional talablar.',
+        'Maqsadli jarayonlar, klass diagrammalari, ER diagrammalari va integratsiya talablari.',
+        'Ekran shakllari, sinov metodikasi va joriy etish metodikasi.'
+      ],
+      technologies: ['MS SQL', 'JS', '1C ERP', 'Oracle Primavera', 'AutoCAD', 'Aveva PDMS', 'SOAP'],
+      outcome: [
+        'Loyihalar, resurslar va injiniring hujjat aylanishini boshqarish uchun yagona axborot tizimi yaratildi.',
+        'Erta bosqichda hodisalarni bashorat qilish, xavflarni boshqarish va loyiha ishi narxi hamda muddatini baholash amalga oshirildi.',
+        'Loyiha muddatlari va xarajatlari qisqartirildi, loyiha ishlari sifati oshirildi.',
+        'Tizimdan taxminan 800 xodim foydalangan; umumiy hajmi 6 TB bo\'lgan taxminan 450 000 fayl qayta ishlangan, oyiga 90 000 gacha tranzaksiya, eng yuqori samaradorlik soniyasiga 25 tranzaksiya.',
+        '1C platformasida tuzilgan yetkazib berish jarayoni bilan noldan ishlab chiqish va qo\'llab-quvvatlash bo\'limi (6 xodim) yaratildi: boshlash, ishlab chiqish, tajriba ekspluatatsiyasi va ishlab chiqarishga chiqarish.'
+      ]
+    },
+    {
+      id: 'financial-management-project-planning',
+      sectors: ['construction', 'oil-gas'],
+      title: 'Injiniring loyihalarida byudjetlashtirish, shartnomalar va hisob-kitoblarni boshqarish',
+      company: 'Giprovostokneft',
+      role: 'Yetakchi dasturchi-muhandis',
+      sectorLabel: 'Neft-gaz va qurilish',
+      contextLine: 'Giprovostokneft · Neft-gaz va qurilish',
+      summary:
+        'Loyiha institutida g\'aznachilik, byudjetlashtirish (BDR, BDDS, investitsiya byudjeti), moliyaviy nazorat va loyiha rejalashtirishni boshqarish tizimlari ishlab chiqildi va joriy etildi. Avtomatik vazifa yaratish bilan kontrolling, qarzdorlikni bashorat qilish va "agar bo\'lsa nima bo\'ladi" tahlili bilan tahliliy hisobot, shuningdek korporativ portal va Oracle Primavera bilan integratsiyalarni o\'z ichiga oladi.',
+      preparedArtifacts: [
+        'G\'aznachilik, BDDS, BDR va investitsiya byudjeti modullari.',
+        'Ishlab chiqarish, sotish, ish haqi, investitsiyalar va kredit liniyalari bo\'yicha funksional byudjetlar.',
+        'Ko\'p valyutali hisob-kitoblar, shartnomalar hisobi, qo\'shimcha kelishuvlar kuzatuvi va muddatlarni nazorat qilish.',
+        'Tahliliy hisobot, qarzdorlikni bashorat qilish, "agar bo\'lsa nima bo\'ladi" tahlili va faktorli tahlil.',
+        'Loyihalar bo\'yicha hajm-kalendar rejalashtirish, subpudrat ishlarini hisobga olish va kalendar rejalashtirish.',
+        '1C ZUP, korporativ portal va Oracle Primavera bilan integratsiyalar.'
+      ],
+      technologies: ['.NET C#', '1C Accounting', 'Intalev Corporate Finance', 'MS SQL', 'MS SharePoint', 'Oracle Primavera', 'SOAP'],
+      outcome: [
+        'Taxminan 1000 foydalanuvchi uchun moliyaviy boshqaruv va loyiha rejalashtirish tizimi joriy etildi.',
+        'Qisqa muddatli kredit qarzdorligi va korxona xarajatlari qisqartirildi. Hisob-kitoblar shaffofligi oshirildi, moliyaviy holat va xavflarni bashorat qilish va nazorat qilish yaxshilandi.'
+      ]
+    },
+    {
+      id: 'engineering-data-document-management',
+      sectors: ['construction'],
+      title: 'Injiniring ma\'lumotlarini boshqarish va injiniring hujjat aylanishi',
+      company: 'Enter Engineering Russia',
+      role: 'Tizim tahlilchisi',
+      contextLine: 'Enter Engineering Russia · Tizimli tahlil · Qurilish',
+      summary:
+        'Intergraph Hexagon asosida sanoat qurilishida injiniring ma\'lumotlarini boshqarish va injiniring hujjat aylanishi uchun talablar va texnik loyiha artefaktlari tayyorlandi.',
+      preparedArtifacts: [
+        '1D, 2D va 3D ma\'lumotlarni qamrab oluvchi injiniring ma\'lumotlarini boshqarish texnik loyihasi.',
+        'Texnik hujjat aylanishiga qo\'yiladigan talablar.',
+        'Injiniring hujjatlarini chiqarish va tegishli injiniring ma\'lumotlar oqimlari uchun tizim chegaralari.',
+        'SDx injiniring hujjat aylanishi tizimi sifatida tizim landshafti tavsifi.'
+      ],
+      technologies: ['Intergraph Hexagon SDx', 'Intergraph Hexagon SRD', 'CAD systems', 'REST'],
+      outcome: [
+        '1D, 2D va 3D ma\'lumotlarni qamrab oluvchi injiniring hujjat aylanishi va injiniring ma\'lumotlarini boshqarish tizimi joriy etildi.'
+      ]
+    },
+    {
+      id: 'procurement-supply-chain',
+      sectors: ['construction'],
+      title: 'Xaridlar va yetkazib berish zanjirini boshqarish',
+      company: 'Enter Engineering Russia',
+      role: 'Tizim tahlilchisi',
+      contextLine: 'Enter Engineering Russia · Tizimli tahlil · Qurilish',
+      summary:
+        'Smart Materials, Smart Reference Data va 1C ERP USO asosida sanoat qurilishi uchun xaridlar, logistika, yetkazib berish zanjiri va qurilishni ekspluatatsiyaga topshirish jarayonlari bo\'yicha talablar va texnik loyiha artefaktlari tayyorlandi.',
+      preparedArtifacts: [
+        'Xaridlar va logistikani boshqarish talablari.',
+        'Qurilish ishlarini bajarish va ekspluatatsiyaga topshirish talablari.',
+        'Normativ-ma\'lumotnoma axborotini boshqarish talablari.',
+        'Smart Materials, Smart Reference Data va 1C ERP USO ni qamrab oluvchi tizim landshafti tavsifi.'
+      ],
+      technologies: ['Intergraph Hexagon', 'Smart Materials', 'Smart Reference Data', 'REST', 'SOAP', '1C ERP USO', 'Oracle DB'],
+      outcome: [
+        'Xaridlar, logistika, normativ-ma\'lumotnoma axborotini boshqarish va qurilish ob\'yektlarini ekspluatatsiyaga topshirish tizimi joriy etildi.'
+      ]
+    },
+    {
+      id: 'bpmn-er-modeler',
+      sectors: ['other'],
+      title: 'BPMN/ER Modeler',
+      company: 'Shaxsiy loyiha',
+      role: 'Mualliflik vositasi',
+      contextLine: 'Shaxsiy loyiha · Boshqa loyihalar',
+      summary:
+        'Lokal BPMN/ER Modeler ishlab chiqildi: BPMN.io (bpmn-js) asosidagi BPMN muharriri va DBML/dbdiagram.io sintaksisiga asoslangan maxsus DSL bo\'yicha ER muharriri.',
+      preparedArtifacts: [],
+      technologies: [
+        'BPMN.io (bpmn-js)',
+        'DBML',
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'SVG',
+        'File System Access API',
+        'Canvas API'
+      ],
+      outcome: [
+        'BPMN jarayonlarini modellashtirish va ER diagrammalari uchun lokal vosita joriy etildi.',
+        'Server infratuzilmasisiz bitta ish maydonida jarayon va ma\'lumotlar modellarini birlashtirish amalga oshirildi.'
       ]
     }
   ]

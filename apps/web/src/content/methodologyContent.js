@@ -328,6 +328,170 @@ export const methodologyContent = {
         ]
       }
     ]
+  },
+  uz: {
+    metaTitle: 'Metodologiya - Vladimir Belov',
+    metaDescription:
+      'Vladimir Belovning biznes tahlili, jarayonlarni boshqarish, talablarni kuzatish va risklar boshqaruvi bo\'yicha ichki kurslari va kompetensiyalarni rivojlantirish yondashuvi.',
+    title: 'Metodologiya va kompetensiyalarni rivojlantirish',
+    description: 'Quyidagi yo\'nalishlar bo\'yicha kurslar tayyorlaganman va o\'qitish o\'tkazaman:',
+    menuTitle: 'Yo\'nalishlar',
+    topicsTitle: 'Mavzular',
+    directions: [
+      {
+        id: 'course-business-analysis-process-management',
+        menuTitle: 'Biznes tahlili va jarayonlarni boshqarish',
+        title: 'Biznes tahlili va jarayonlarni boshqarish',
+        topicBlocks: [
+          {
+            title: '1-blok. Asoslar: jarayon nima va u nima uchun kerak?',
+            items: [
+              'Jarayon nima',
+              'Loyiha nima',
+              'Jarayonli boshqaruv yondashuvi',
+              'Qiymat yaratish zanjiri',
+              'Maqsad qo\'yish'
+            ]
+          },
+          {
+            title: '2-blok. Biznes jarayonning mohiyati: komponentlar va boshqaruv',
+            items: [
+              'Biznes jarayon nima',
+              'Qadamlar, hodisalar va biznes qoidalar',
+              'Jarayondagi rollar va ob\'yektlar',
+              'Jarayon konteksti va metrikalari',
+              'Jarayon darajalari: L0-L3',
+              'Jarayon modeli',
+              'Arxitektura bilan aloqasi'
+            ]
+          },
+          {
+            title: '3-blok. Jarayonning hayot sikli va takomillashtirish',
+            items: [
+              'AS-IS / TO-BE jarayonlari',
+              'Jarayonni hujjatlashtirish',
+              'Jarayonni joriy etish',
+              'Shewhart-Deming sikli (PDCA)'
+            ]
+          },
+          {
+            title: '4-blok. Modellashtirish: notatsiyalar, sifat va vositalar',
+            items: [
+              'Jarayonlarni modellashtirish notatsiyalari',
+              'BPMN 2.0: asosiy elementlar',
+              'IDEF0, UML Activity va ArchiMate',
+              'Cheklovlar',
+              'Vositalar'
+            ]
+          },
+          {
+            title: '5-blok. Talablarni tayyorlash va kuzatish',
+            items: [
+              'User Story: shablon va ajratish',
+              'Kuzatish: US \u2192 Use Cases',
+              'BPMN va C4 arxitekturasi',
+              'UC \u2192 jarayon modeli (BPMN)',
+              'Business Rules BPMN da',
+              'Talablar sifat atributlari'
+            ]
+          }
+        ]
+      },
+      {
+        id: 'course-risk-management-iso-31000',
+        menuTitle: 'ISO 31000 bo\'yicha risklar boshqaruvi',
+        title: 'ISO 31000 bo\'yicha risklar boshqaruvi',
+        topicBlocks: [
+          {
+            title: '1. Risk ta\'rifi'
+          },
+          {
+            title: '2. ISO 31000 bo\'yicha risklar boshqaruvi jarayoni',
+            items: [
+              'Risklarni aniqlash',
+              'Anomaliyalarni aniqlash',
+              'Anomaliyalarni aniqlash uchun axborot manbalari',
+              'Risklar tahlili',
+              'Risklar bahosi',
+              'Riskni boshqarish strategiyasi',
+              'Mitigatsiya choralari',
+              'Monitoring',
+              'O\'qitish va yangilash'
+            ]
+          },
+          {
+            title: '3. Keys: MVNO dagi risklar'
+          },
+          {
+            title: '4. Atamalar va ta\'riflar'
+          },
+          {
+            title: '5. Risklar boshqaruvi va antifraud bo\'yicha standartlar va freymvorklar'
+          }
+        ]
+      },
+      {
+        id: 'course-requirements-management-traceability',
+        menuTitle: 'Talablarni boshqarish va kuzatish: SMART \u2192 US \u2192 C4 \u2192 BPMN \u2192 UC',
+        title: 'Talablarni boshqarish va kuzatish: SMART \u2192 US \u2192 C4 \u2192 BPMN \u2192 UC',
+        topicBlocks: [
+          {
+            title: '1-blok. Maqsad qo\'yish',
+            items: [
+              'SMART maqsadlar',
+              'Talablar manbalari: intervyular, CJM, qayta aloqa, biznes kontekst',
+              'User Story biznes ehtiyojni qayd etish shakli sifatida',
+              'User Story sifat atributlari'
+            ]
+          },
+          {
+            title: '2-blok. Kuzatish: User Stories \u2192 Use Cases',
+            items: [
+              'User Story shakllantirish',
+              'User Story ni Use Cases ga dekompozitsiya qilish',
+              'Aktor, biznes ob\'yekt, harakat, tizim, qiymat',
+              'Use Cases funksional talablar asosi sifatida'
+            ]
+          },
+          {
+            title: '3-blok. C4 Level 1 tayyorlash',
+            items: [
+              'Use Cases dan olingan tizimlar va aktorlar',
+              'Tizimlar orasidagi ma\'lumot oqimlari va chaqiruvlar',
+              'C4 talablar va arxitektura orasidagi bog\'lovchi qatlam sifatida'
+            ]
+          },
+          {
+            title: '4-blok. BPMN notatsiyasida jarayon modeli',
+            items: [
+              'Use Case dan BPMN da foydalanish',
+              'C4 Level 1 va BPMN pullari orasidagi aloqa',
+              'Message flows tizimlar orasidagi integratsiya sifatida'
+            ]
+          },
+          {
+            title: '5-blok. Business Rules va jarayon mantiqi',
+            items: [
+              'Business Rules jarayon tarmoqlanish shartlari sifatida',
+              'XOR / OR gateways',
+              'Biznes qoidalar va BPMN orasidagi aloqa',
+              'DMN murakkab qoidalar uchun'
+            ]
+          },
+          {
+            title: '6-blok. Uzluksiz kuzatish va talablar sifati',
+            items: [
+              'Talablarni kuzatish: SMART \u2192 US \u2192 UC \u2192 C4 \u2192 BPMN',
+              'API va testlar',
+              'Talablar, arxitektura va jarayon modeli yaxlitligini nazorat qilish',
+              'Talablar sifat atributlari',
+              'Talablar o\'zgarishlarini boshqarish',
+              'Jamoalar uchun vazifalar tayyorlash'
+            ]
+          }
+        ]
+      }
+    ]
   }
 };
 

@@ -30,5 +30,21 @@ export const homeContent = {
     ],
     primaryCta: 'Смотреть портфолио',
     secondaryCta: 'Связаться'
+  },
+  uz: {
+    metaTitle: 'Vladimir Belov - Tizim va biznes tahlilchisi',
+    metaDescription:
+      'Fintech, telekommunikatsiya, neft-gaz va qurilish sohalari uchun axborot tizimlarini loyihalashda 18+ yillik tajriba. Tizim tahlili, biznes tahlili, korporativ arxitektura va talablarni ishlab chiqishga ixtisoslashgan.',
+    imageAlt: 'Raqamli tizimlar va tarmoq vizualizatsiyasi foni',
+    title: 'Tizim va biznes tahlilchisi',
+    description:
+      'Fintech, telekommunikatsiya, neft-gaz va qurilish sohalari uchun axborot tizimlarini loyihalashda 18+ yillik tajriba. Tizim tahlili, biznes tahlili, korporativ arxitektura va talablarni ishlab chiqishga ixtisoslashganman.',
+    competencies: [
+      'Biznes tahlili',
+      'Tizim tahlili',
+      'Korporativ arxitektura'
+    ],
+    primaryCta: 'Portfolioni ko\'rish',
+    secondaryCta: 'Bog\'lanish'
   }
 };

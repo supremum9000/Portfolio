@@ -70,5 +70,41 @@ export const contactContent = {
         messageMin: 'Сообщение должно содержать не менее 10 символов'
       }
     }
+  },
+  uz: {
+    metaTitle: 'Aloqa - Vladimir Belov',
+    metaDescription:
+      'Vladimir Belov bilan tizim tahlili, biznes tahlili, korporativ arxitektura, antifraud yechimlari va talablarni ishlab chiqish bo\'yicha bog\'lanish.',
+    title: 'Bog\'lanish',
+    description:
+      'Tizim tahlili, biznes tahlili, korporativ arxitektura, antifraud yechimlari va talablarni ishlab chiqish sohasida yangi lavozimlar, loyihalar va kasbiy hamkorlikni muhokama qilishga tayyorman.',
+    infoTitle: 'Aloqa ma\'lumotlari',
+    emailLabel: 'Email',
+    locationLabel: 'Joylashuv',
+    locationValue: 'Moskva, Rossiya',
+    relocationValue: 'Ko\'chishga tayyor: O\'zbekiston',
+    networkLabel: 'Professional tarmoq',
+    networkValue: 'LinkedIn',
+    responseTimeTitle: 'Javob berish muddati',
+    responseTimeText: 'Odatda ish kunlarida 24-48 soat ichida javob beraman.',
+    formTitle: 'Xabar yuborish',
+    form: {
+      nameLabel: 'Ism',
+      namePlaceholder: 'Ismingiz',
+      emailLabel: 'Email',
+      emailPlaceholder: 'your.email@example.com',
+      messageLabel: 'Xabar',
+      messagePlaceholder: 'Xabaringiz...',
+      submitLabel: 'Xabar yuborish',
+      submittingLabel: 'Saqlanmoqda...',
+      successMessage: 'Xabar mahalliy saqlandi.',
+      errors: {
+        nameRequired: 'Ism kiritish shart',
+        emailRequired: 'Email kiritish shart',
+        emailInvalid: 'Iltimos, to\'g\'ri email manzilini kiriting',
+        messageRequired: 'Xabar kiritish shart',
+        messageMin: 'Xabar kamida 10 ta belgidan iborat bo\'lishi kerak'
+      }
+    }
   }
 };

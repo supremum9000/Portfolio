@@ -68,5 +68,40 @@ export const aboutContent = {
         ]
       }
     ]
+  },
+  uz: {
+    metaTitle: 'Men haqimda - Vladimir Belov',
+    metaDescription:
+      'Vladimir Belov haqida: fintech, telekommunikatsiya, neft-gaz va qurilish sohalarida 18+ yillik tajribaga ega tizim va biznes tahlilchisi.',
+    title: 'Men haqimda',
+    facts: {
+      age: 'Yoshi: 48',
+      emailLabel: 'Email',
+      relocation: 'Ko\'chishga tayyor: O\'zbekiston'
+    },
+    paragraphs: [
+      'Fintech, telekommunikatsiya, neft-gaz va qurilish sohalari uchun axborot tizimlarini loyihalashda 18+ yillik tajribam bor. Tizim tahlili, biznes tahlili, korporativ arxitektura va talablarni ishlab chiqishga ixtisoslashganman.'
+    ],
+    sections: [
+      {
+        title: 'Ixtisosliklar',
+        items: [
+          'Tizim tahlilchisi',
+          'Biznes tahlilchisi',
+          'Korporativ arxitektura',
+          'Talablarni ishlab chiqish'
+        ]
+      },
+      {
+        title: 'Asosiy kompetensiyalar',
+        items: [
+          'Talablarni ishlab chiqish',
+          'API tavsiflari va ma\'lumotlar modellashtirish',
+          'BPMN 2.0 notatsiyasida jarayonlarni modellashtirish',
+          'C4 arxitekturasini tayyorlash',
+          'Talablar shablonlarini tayyorlash'
+        ]
+      }
+    ]
   }
 };
