@@ -589,17 +589,17 @@ export const portfolioCases = {
     {
       id: 'fraud-detection',
       sectors: ['telecom'],
-      title: 'Firibgarlikni aniqlash',
+      title: 'Antifraud',
       company: 'Alfa-Mobile',
       role: 'Axborot xavfsizligi yo\'nalishi tahlilchisi',
-      contextLine: 'Alfa-Mobile · Tizimli va biznes-tahlil · Antifraud',
+      contextLine: 'Alfa-Mobile · Tizim va biznes tahlili · Antifraud',
       summary:
-        'MVNO operatsiyalari va bank firibgarlikka qarshi tizimi kesishmasida telekommunikatsiya antifraud tashabbusi uchun tahliliy artefaktlar va talablar tayyorlandi: firibgarlik stsenariylari, biznes uchun muhim hodisalar, aniqlash mantiqi va xavflarni kamaytirish choralari.',
+        'MVNO operatsiyalari va bank firibgarlikka qarshi tizimi kesishmasida telekommunikatsiya antifraud tashabbusi uchun tahliliy artefaktlar va talablar tayyorladim: firibgarlik stsenariylari, biznes uchun muhim hodisalar, aniqlash mantiqi va xavflarni kamaytirish choralari.',
       preparedArtifacts: [
         'Beshta anomaliya guruhi bo\'yicha tasniflangan firibgarlik stsenariylari reestri: xulq-atvor, moliyaviy, kontekstual, texnik va mijozlarga oid.',
         'Firibgarlikni monitoring qilish uchun aniqlash ko\'rsatkichlari, chegara qiymatlari va hisoblash yondashuvlari.',
         'MVNO va bank firibgarlikka qarshi tizimi integratsiyasi uchun biznes uchun muhim hodisalar, ma\'lumot manbalari va boshqaruv harakatlari.',
-        'AI firibgarlikni aniqlash stsenariylari va antifraud tizimiga qo\'yiladigan talablar.'
+        'AI antifraud stsenariylari va antifraud tizimiga qo\'yiladigan talablar.'
       ],
       technologies: ['Kafka', 'SS7', 'OCS Forward Fusion', 'DMS', 'IBM DataPower', 'SMS Center', 'REST'],
       outcome: [
@@ -614,13 +614,13 @@ export const portfolioCases = {
       title: 'AI ovozli yordamchi',
       company: 'Alfa-Mobile',
       role: 'Axborot xavfsizligi yo\'nalishi tahlilchisi',
-      contextLine: 'Alfa-Mobile · Tizimli va biznes-tahlil · Antifraud',
+      contextLine: 'Alfa-Mobile · Tizim va biznes tahlili · Antifraud',
       summary:
-        'Abonentlar bilan muloqot qilish uchun AI ovozli yordamchiga talablar tayyorlandi, xizmat stsenariylari va yechimni keyingi loyihalash uchun zarur tahliliy artefaktlarga e\'tibor qaratildi.',
+        'Abonentlar bilan muloqot qilish uchun AI ovozli yordamchiga talablar tayyorladim, xizmat stsenariylari va yechimni keyingi loyihalash uchun zarur tahliliy artefaktlarga e\'tibor qaratdim.',
       preparedArtifacts: [
-        'Funksional talablar.',
-        'Nofunksional talablar.',
-        'Mijoz sayohati xaritalari (CJM).',
+        'Funktsional talablar.',
+        'Nofunktsional talablar.',
+        'Mijoz yo\'li xaritalari (CJM).',
         'Xizmat stsenariylari uchun BPMN diagrammalari.'
       ],
       technologies: ['Just AI', 'Kafka', 'Keycloak', 'S3 MinIO', 'IBM DataPower', 'PostgreSQL', 'MongoDB', 'REST'],
@@ -634,11 +634,11 @@ export const portfolioCases = {
       title: 'Bildirishnoma xizmati',
       company: 'Alfa-Mobile',
       role: 'Axborot xavfsizligi yo\'nalishi tahlilchisi',
-      contextLine: 'Alfa-Mobile · Tizimli va biznes-tahlil · Antifraud',
+      contextLine: 'Alfa-Mobile · Tizim va biznes tahlili · Antifraud',
       summary:
-        'Bildirishnoma xizmati uchun tahliliy artefaktlar tayyorlandi, kommunikatsiya stsenariylari, API tavsifi va yuqori darajadagi arxitektura chegaralariga e\'tibor qaratildi.',
+        'Bildirishnoma xizmati uchun tahliliy artefaktlar tayyorladim, kommunikatsiya stsenariylari, API tavsifi va yuqori darajadagi arxitektura chegaralariga e\'tibor qaratdim.',
       preparedArtifacts: [
-        'Funksional talablar.',
+        'Funktsional talablar.',
         'BPMN diagrammalari.',
         'REST API spetsifikatsiyasi.',
         'C4 Level 1 arxitektura artefaktlari.'
@@ -655,12 +655,12 @@ export const portfolioCases = {
       title: 'ATMda rozilik imzolash',
       company: 'Innotech',
       role: 'Yetakchi tizim tahlilchisi',
-      contextLine: 'Innotech · Tizimli va biznes-tahlil · Fintech',
+      contextLine: 'Innotech · Tizim va biznes tahlili · Fintech',
       summary:
-        'ATMlarda kredit byurosi va tegishli roziliklarni imzolash uchun to\'liq tahliliy paket tayyorlandi: biznes asoslash, talablar, API dizayni, ma\'lumotlar modeli va xavflar tahlilini qamrab oladi.',
+        'ATMlarda kredit byurosi va tegishli roziliklarni imzolash uchun to\'liq tahliliy paket tayyorladim: biznes asoslash, talablar, API dizayni, ma\'lumotlar modeli va xavflar tahlilini qamrab oladi.',
       preparedArtifacts: [
         'Biznes-keys va iqtisodiy samaralar.',
-        'Biznes, funksional, nofunksional va integratsiya talablari.',
+        'Biznes, funktsional, nofunktsional va integratsiya talablari.',
         'REST API dizayni va ma\'lumotlar modeli artefaktlari, jumladan klass va ER diagrammalari.',
         'Moliyaviy ta\'sir hisob-kitobi, xavflarni kamaytirish choralari, CJM va MVP chegaralari bilan xavflar tavsifi.'
       ],
@@ -675,15 +675,15 @@ export const portfolioCases = {
       sectors: ['construction'],
       title: 'Injiniring loyihalarini boshqarish',
       company: 'Mosinzhproekt',
-      role: 'Bosh mutaxassis',
-      contextLine: 'Mosinzhproekt · Tizimli tahlil · Qurilish',
+      role: 'Yetakchi mutaxassis',
+      contextLine: 'Mosinzhproekt · Tizim tahlili · Qurilish',
       summary:
-        'Injiniring loyihalarini boshqarish axborot tizimi uchun maqsadli biznes arxitektura va talablar ishlab chiqildi. Tizimning asosiy bloklari: shartnomalar va loyiha xarajatlarini boshqarish, BDR/BDDS byudjetlashtirish, loyihalar portfelini boshqarish, injiniring ma\'lumotlari va hujjatlar chiqarishni nazorat qilish, resurslarni boshqarish, kalendar-tarmoq grafiklari va Oracle Primavera integratsiyasi.',
+        'Injiniring loyihalarini boshqarish axborot tizimi uchun maqsadli biznes arxitektura va talablar ishlab chiqdim. Tizimning asosiy bloklari: shartnomalar va loyiha xarajatlarini boshqarish, BDR/BDDS byudjetlashtirish, loyihalar portfelini boshqarish, injiniring ma\'lumotlari va hujjatlar chiqarishni nazorat qilish, resurslarni boshqarish, kalendar-tarmoq grafiklari va Oracle Primavera integratsiyasi.',
       preparedArtifacts: [
         'Maqsadli biznes-jarayonlar.',
         'Rollar modeli.',
         'Ma\'lumotlar modeli.',
-        'Axborot tizimiga funksional talablar.',
+        'Axborot tizimiga funktsional talablar.',
         'Sinov dasturi va metodikasi.',
         'Joriy etish metodikasi.'
       ],
@@ -702,9 +702,9 @@ export const portfolioCases = {
       sectorLabel: 'Neft-gaz va qurilish',
       contextLine: 'NIPIGAZ · Neft-gaz va qurilish',
       summary:
-        'Neft-gaz qurilishi uchun injiniring loyihalarini boshqarish tizimi arxitekturasi ishlab chiqildi. Loyiha maqsadlari: qurilish ishlarining kechikish sabablarini aniqlash, yagona bog\'langan grafik orqali rejalashtirish aniqligini oshirish (loyiha hujjatlari, yetkazib berish, qurilish), uzluksiz rejalashtirish uchun yagona materiallar va jihozlar bazasini yaratish, shartnoma majburiyatlari nazoratini yaxshilash, BDR/BDDS aniqligini oshirish va kassa uzilishlarini aniqlash.',
+        'Neft-gaz qurilishi uchun injiniring loyihalarini boshqarish tizimi arxitekturasini ishlab chiqdim. Loyiha maqsadlari: qurilish ishlarining kechikish sabablarini aniqlash, yagona bog\'langan grafik orqali rejalashtirish aniqligini oshirish (loyiha hujjatlari, yetkazib berish, qurilish), boshidan oxirigacha rejalashtirish uchun yagona materiallar va jihozlar bazasini yaratish, shartnoma majburiyatlari nazoratini yaxshilash, BDR/BDDS aniqligini oshirish va pul oqimidagi uzilishlarni aniqlash.',
       preparedArtifacts: [
-        'Funksional talablar.',
+        'Funktsional talablar.',
         'Tizim arxitekturasi.',
         'Integratsiya talablari.',
         'Sinov dasturi va metodikasi.'
@@ -717,18 +717,18 @@ export const portfolioCases = {
     {
       id: 'unified-information-space',
       sectors: ['construction', 'oil-gas'],
-      title: 'Loyiha instituti uchun yagona axborot maydoni',
+      title: 'Loyiha instituti uchun yagona axborot muhiti',
       company: 'VNIPIneft',
-      role: 'Bo\'lim rahbari',
+      role: 'Bo\'lim boshlig\'i',
       sectorLabel: 'Neft-gaz va qurilish',
       contextLine: 'VNIPIneft · Neft-gaz va qurilish',
       summary:
-        'Birinchi va ikkinchi darajali jarayonlar hamda joriy axborot landshafti tahlil qilindi. Asosiy muammolar aniqlandi: turli tizimlarda funksiyalar va ma\'lumotlarning takrorlanishi, ko\'p sonli turli xil axborot tizimlari, ziddiyatli ma\'lumotlar va takroriy hisobotlar. Jarayonlarni optimallashtirish va reinjiniring choralari, shuningdek loyiha instituti uchun yagona axborot maydonini yaratish strategiyasi taklif etildi.',
+        'Birinchi va ikkinchi darajali jarayonlar hamda joriy axborot landshaftini tahlil qildim. Asosiy muammolarni aniqladim: turli tizimlarda funktsiyalar va ma\'lumotlarning takrorlanishi, ko\'p sonli turli xildagi axborot tizimlari, ziddiyatli ma\'lumotlar va takroriy hisobotlar. Jarayonlarni optimallashtirish va qayta tashkil etish choralari, shuningdek loyiha instituti uchun yagona axborot muhitini yaratish strategiyasini taklif etdim.',
       preparedArtifacts: [
-        'Loyiha maqsadlari va ustavi.',
+        'Loyiha maqsadlari va nizomi.',
         'Byudjet modeli.',
         'Tizim arxitekturasi.',
-        'Biznes, funksional va nofunksional talablar.',
+        'Biznes, funktsional va nofunktsional talablar.',
         'Maqsadli jarayonlar, klass diagrammalari, ER diagrammalari va integratsiya talablari.',
         'Ekran shakllari, sinov metodikasi va joriy etish metodikasi.'
       ],
@@ -746,16 +746,16 @@ export const portfolioCases = {
       sectors: ['construction', 'oil-gas'],
       title: 'Injiniring loyihalarida byudjetlashtirish, shartnomalar va hisob-kitoblarni boshqarish',
       company: 'Giprovostokneft',
-      role: 'Yetakchi dasturchi-muhandis',
+      role: 'Yetakchi dasturiy ta\'minot muhandisi',
       sectorLabel: 'Neft-gaz va qurilish',
       contextLine: 'Giprovostokneft · Neft-gaz va qurilish',
       summary:
-        'Loyiha institutida g\'aznachilik, byudjetlashtirish (BDR, BDDS, investitsiya byudjeti), moliyaviy nazorat va loyiha rejalashtirishni boshqarish tizimlari ishlab chiqildi va joriy etildi. Avtomatik vazifa yaratish bilan kontrolling, qarzdorlikni bashorat qilish va "agar bo\'lsa nima bo\'ladi" tahlili bilan tahliliy hisobot, shuningdek korporativ portal va Oracle Primavera bilan integratsiyalarni o\'z ichiga oladi.',
+        'Loyiha institutida g\'aznachilik, byudjetlashtirish (BDR, BDDS, investitsiya byudjeti), moliyaviy nazorat va loyiha rejalashtirishni boshqarish tizimlarini ishlab chiqdim va joriy etdim. Avtomatik vazifa yaratish bilan kontrolling, qarzdorlikni bashorat qilish va what-if tahlili bilan tahliliy hisobot, shuningdek korporativ portal va Oracle Primavera bilan integratsiyalarni o\'z ichiga oladi.',
       preparedArtifacts: [
         'G\'aznachilik, BDDS, BDR va investitsiya byudjeti modullari.',
-        'Ishlab chiqarish, sotish, ish haqi, investitsiyalar va kredit liniyalari bo\'yicha funksional byudjetlar.',
+        'Ishlab chiqarish, sotish, ish haqi, investitsiyalar va kredit liniyalari bo\'yicha funktsional byudjetlar.',
         'Ko\'p valyutali hisob-kitoblar, shartnomalar hisobi, qo\'shimcha kelishuvlar kuzatuvi va muddatlarni nazorat qilish.',
-        'Tahliliy hisobot, qarzdorlikni bashorat qilish, "agar bo\'lsa nima bo\'ladi" tahlili va faktorli tahlil.',
+        'Tahliliy hisobot, qarzdorlikni bashorat qilish, what-if tahlili va faktorli tahlil.',
         'Loyihalar bo\'yicha hajm-kalendar rejalashtirish, subpudrat ishlarini hisobga olish va kalendar rejalashtirish.',
         '1C ZUP, korporativ portal va Oracle Primavera bilan integratsiyalar.'
       ],
@@ -771,9 +771,9 @@ export const portfolioCases = {
       title: 'Injiniring ma\'lumotlarini boshqarish va injiniring hujjat aylanishi',
       company: 'Enter Engineering Russia',
       role: 'Tizim tahlilchisi',
-      contextLine: 'Enter Engineering Russia · Tizimli tahlil · Qurilish',
+      contextLine: 'Enter Engineering Russia · Tizim tahlili · Qurilish',
       summary:
-        'Intergraph Hexagon asosida sanoat qurilishida injiniring ma\'lumotlarini boshqarish va injiniring hujjat aylanishi uchun talablar va texnik loyiha artefaktlari tayyorlandi.',
+        'Intergraph Hexagon asosida sanoat qurilishida injiniring ma\'lumotlarini boshqarish va injiniring hujjat aylanishi uchun talablar va texnik loyiha artefaktlarini tayyorladim.',
       preparedArtifacts: [
         '1D, 2D va 3D ma\'lumotlarni qamrab oluvchi injiniring ma\'lumotlarini boshqarish texnik loyihasi.',
         'Texnik hujjat aylanishiga qo\'yiladigan talablar.',
@@ -791,9 +791,9 @@ export const portfolioCases = {
       title: 'Xaridlar va yetkazib berish zanjirini boshqarish',
       company: 'Enter Engineering Russia',
       role: 'Tizim tahlilchisi',
-      contextLine: 'Enter Engineering Russia · Tizimli tahlil · Qurilish',
+      contextLine: 'Enter Engineering Russia · Tizim tahlili · Qurilish',
       summary:
-        'Smart Materials, Smart Reference Data va 1C ERP USO asosida sanoat qurilishi uchun xaridlar, logistika, yetkazib berish zanjiri va qurilishni ekspluatatsiyaga topshirish jarayonlari bo\'yicha talablar va texnik loyiha artefaktlari tayyorlandi.',
+        'Smart Materials, Smart Reference Data va 1C ERP USO asosida sanoat qurilishi uchun xaridlar, logistika, yetkazib berish zanjiri va qurilishni ekspluatatsiyaga topshirish jarayonlari bo\'yicha talablar va texnik loyiha artefaktlarini tayyorladim.',
       preparedArtifacts: [
         'Xaridlar va logistikani boshqarish talablari.',
         'Qurilish ishlarini bajarish va ekspluatatsiyaga topshirish talablari.',
@@ -810,10 +810,10 @@ export const portfolioCases = {
       sectors: ['other'],
       title: 'BPMN/ER Modeler',
       company: 'Shaxsiy loyiha',
-      role: 'Mualliflik vositasi',
+      role: 'Muallif vositasi',
       contextLine: 'Shaxsiy loyiha · Boshqa loyihalar',
       summary:
-        'Lokal BPMN/ER Modeler ishlab chiqildi: BPMN.io (bpmn-js) asosidagi BPMN muharriri va DBML/dbdiagram.io sintaksisiga asoslangan maxsus DSL bo\'yicha ER muharriri.',
+        'Mahalliy BPMN/ER Modeler ishlab chiqdim: BPMN.io (bpmn-js) asosidagi BPMN muharriri va DBML/dbdiagram.io sintaksisiga asoslangan maxsus DSL bo\'yicha ER muharriri.',
       preparedArtifacts: [],
       technologies: [
         'BPMN.io (bpmn-js)',
@@ -826,7 +826,7 @@ export const portfolioCases = {
         'Canvas API'
       ],
       outcome: [
-        'BPMN jarayonlarini modellashtirish va ER diagrammalari uchun lokal vosita joriy etildi.',
+        'BPMN jarayonlarini modellashtirish va ER diagrammalari uchun mahalliy vosita joriy etildi.',
         'Server infratuzilmasisiz bitta ish maydonida jarayon va ma\'lumotlar modellarini birlashtirish amalga oshirildi.'
       ]
     }

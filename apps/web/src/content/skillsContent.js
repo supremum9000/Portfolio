@@ -159,7 +159,7 @@ export const skillsContent = {
       'Vladimir Belovning tahlil, arxitektura, texnologiyalar, loyiha ishlari va qo\'shimcha biznes sohalari bo\'yicha ko\'nikmalari va kompetensiyalari.',
     title: 'Ko\'nikmalar va kompetensiyalar',
     description:
-      'Rezyume asosida tahliliy, arxitektura, texnik va loyiha kompetensiyalarining tuzilgan ko\'rinishi.',
+      'Rezyume asosida tahliliy, arxitektura, texnik va loyiha kompetensiyalarining tizimlashtirilgan ko\'rinishi.',
     categories: [
       {
         name: 'Tahlil',
@@ -219,7 +219,7 @@ export const skillsContent = {
       {
         name: 'Qo\'shimcha bilimlar',
         skills: [
-          'Risklar boshqaruvi',
+          'Risklarni boshqarish',
           'BABOK',
           'BPM CBOK',
           'Buxgalteriya hisobi',

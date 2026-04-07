@@ -83,7 +83,7 @@ export const contactContent = {
     locationLabel: 'Joylashuv',
     locationValue: 'Moskva, Rossiya',
     relocationValue: 'Ko\'chishga tayyor: O\'zbekiston',
-    networkLabel: 'Professional tarmoq',
+    networkLabel: 'Kasbiy tarmoq',
     networkValue: 'LinkedIn',
     responseTimeTitle: 'Javob berish muddati',
     responseTimeText: 'Odatda ish kunlarida 24-48 soat ichida javob beraman.',
@@ -97,7 +97,7 @@ export const contactContent = {
       messagePlaceholder: 'Xabaringiz...',
       submitLabel: 'Xabar yuborish',
       submittingLabel: 'Saqlanmoqda...',
-      successMessage: 'Xabar mahalliy saqlandi.',
+      successMessage: 'Xabar muvaffaqiyatli saqlandi.',
       errors: {
         nameRequired: 'Ism kiritish shart',
         emailRequired: 'Email kiritish shart',

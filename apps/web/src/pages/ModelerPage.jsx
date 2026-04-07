@@ -19,6 +19,12 @@ const pageContent = {
     metaDescription:
       'Запуск BPMN/ER Modeler Владимира Белова: BPMN-редактор на базе BPMN.io (bpmn-js) и поддержка ER-моделирования в локальном браузерном инструменте.',
     iframeTitle: 'BPMN/ER Modeler'
+  },
+  uz: {
+    metaTitle: 'BPMN/ER Modeler - Vladimir Belov',
+    metaDescription:
+      'Vladimir Belovning BPMN/ER Modeler dasturi: BPMN.io (bpmn-js) asosidagi BPMN muharriri va mahalliy brauzer vositasida ER modellashtirish.',
+    iframeTitle: 'BPMN/ER Modeler'
   }
 };
 

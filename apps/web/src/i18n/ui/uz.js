@@ -10,8 +10,8 @@ export default {
     contact: 'Aloqa'
   },
   actions: {
-    menuToggle: 'Menyuni almashtirish',
-    switchLanguage: 'Tilni almashtirish'
+    menuToggle: 'Menyuni ochish/yopish',
+    switchLanguage: 'Tilni o\'zgartirish'
   },
   locales: {
     en: 'EN',
