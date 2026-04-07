@@ -17,14 +17,14 @@ export const skillsContent = {
           'BPMN',
           'UML',
           'ERD',
-          'CJM',
-          'C4'
+          'CJM'
         ]
       },
       {
         name: 'Architecture',
         skills: [
           'TOGAF',
+          'C4',
           'ArchiMate',
           'Sparx Enterprise Architect',
           'Domain-Driven Design',
@@ -94,14 +94,14 @@ export const skillsContent = {
           'BPMN',
           'UML',
           'ERD',
-          'CJM',
-          'C4'
+          'CJM'
         ]
       },
       {
         name: 'Архитектура',
         skills: [
           'TOGAF',
+          'C4',
           'ArchiMate',
           'Sparx Enterprise Architect',
           'Domain-Driven Design',

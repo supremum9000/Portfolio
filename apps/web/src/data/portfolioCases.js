@@ -163,7 +163,7 @@ export const portfolioCases = {
       role: 'Lead Specialist',
       contextLine: 'Mosinzhproekt · Systems Analysis · Construction',
       summary:
-        'Developed the target business architecture and requirements for an information system for engineering project management, including technical document management and integration with planning tools.',
+        'Developed the target business architecture and requirements for an information system for engineering project management. Key system blocks: contract and project cost management, BDR/BDDS budgeting, project portfolio management, engineering data and document release control, resource management, schedule networks, and Oracle Primavera integration.',
       preparedArtifacts: [
         'Target business processes.',
         'Role model.',
@@ -187,7 +187,7 @@ export const portfolioCases = {
       sectorLabel: 'Oil & Gas and Construction',
       contextLine: 'NIPIGAZ · Oil & Gas and Construction',
       summary:
-        'Developed the architecture of an engineering project management system for oil and gas construction, focused on planning accuracy, engineering data continuity, and integration across project delivery processes.',
+        'Developed the architecture of an engineering project management system for oil and gas construction. Project goals: identify causes of construction delays, improve planning accuracy through a unified linked schedule (design documentation, material supply, construction), create a single materials and equipment database for end-to-end planning, improve contract obligation control, and improve BDR/BDDS accuracy to identify cash gaps.',
       preparedArtifacts: [
         'Functional requirements.',
         'System architecture.',
@@ -196,8 +196,7 @@ export const portfolioCases = {
       ],
       technologies: ['Oracle Primavera', '1C Accounting', '1C UH', '1C ERP', 'AVEVA PDMS', 'CAD systems', 'SOAP', 'MS SQL'],
       outcome: [
-        'Developed the architecture of an engineering project management system for oil and gas construction.',
-        'Implemented planning, budgeting, treasury, and integrations with related systems.'
+        'Implemented an engineering project management system with planning, budgeting, treasury, reference data management, contracts, acts, and integrations with adjacent systems.'
       ]
     },
     {
@@ -209,7 +208,7 @@ export const portfolioCases = {
       sectorLabel: 'Oil & Gas and Construction',
       contextLine: 'VNIPIneft · Oil & Gas and Construction',
       summary:
-        'Analyzed first- and second-level processes and the current information landscape, then proposed process optimization, reengineering measures, and a strategy for creating a unified information space to manage the production processes of a design institute.',
+        'Analyzed first- and second-level processes and the current information landscape. Identified key problems: duplication of functions and data across systems, a large number of heterogeneous information systems, inconsistent information, and duplicate contradictory reports. Proposed process optimization, reengineering measures, and a strategy for creating a unified information space for the design institute.',
       preparedArtifacts: [
         'Project goals and charter.',
         'Budget model.',
@@ -218,12 +217,13 @@ export const portfolioCases = {
         'Target processes, class diagrams, ER diagrams, and integration requirements.',
         'Screen forms, testing methodology, and implementation methodology.'
       ],
-      technologies: ['MS SQL', '1C ERP', 'Oracle Primavera', 'AutoCAD', 'Aveva PDMS', 'SOAP'],
+      technologies: ['MS SQL', 'JS', '1C ERP', 'Oracle Primavera', 'AutoCAD', 'Aveva PDMS', 'SOAP'],
       outcome: [
         'Created a unified information system for project management, resource management, and engineering document control.',
         'Implemented early-stage incident forecasting, risk management, and estimation of project cost and duration.',
         'Reduced project timelines and costs and improved project quality.',
-        'The system was used by about 800 employees and handled about 450,000 files totaling 6 TB, with up to 90,000 transactions per month and peak throughput of 25 transactions per second.'
+        'The system was used by about 800 employees and handled about 450,000 files totaling 6 TB, with up to 90,000 transactions per month and peak throughput of 25 transactions per second.',
+        'Built from scratch a development and support unit (6 employees) on the 1C platform with a structured delivery process: initiation, development, pilot operation, and production release.'
       ]
     },
     {
@@ -235,7 +235,7 @@ export const portfolioCases = {
       sectorLabel: 'Oil & Gas and Construction',
       contextLine: 'Giprovostokneft · Oil & Gas and Construction',
       summary:
-        'Developed and implemented systems for treasury, budgeting, financial control, and project planning in a design institute, including integrations with the corporate portal and Oracle Primavera.',
+        'Developed and implemented systems for treasury, budgeting (BDR, BDDS, investment budget), financial control, and project planning in a design institute. Included controlling with automatic task generation, analytical reporting with debt forecasting and what-if analysis, and integrations with the corporate portal and Oracle Primavera.',
       preparedArtifacts: [
         'Treasury, cash flow budgeting, income and expense budgeting, and investment budget modules.',
         'Functional budgets for production, sales, payroll, investments, and credit lines.',
@@ -256,6 +256,7 @@ export const portfolioCases = {
       title: 'Engineering Data Management and Engineering Document Control',
       company: 'Enter Engineering Russia',
       role: 'Systems Analyst',
+      contextLine: 'Enter Engineering Russia · Systems Analysis · Construction',
       summary:
         'Prepared requirements and technical design artifacts for engineering data management and engineering document control in industrial construction based on Intergraph Hexagon.',
       preparedArtifacts: [
@@ -266,8 +267,7 @@ export const portfolioCases = {
       ],
       technologies: ['Intergraph Hexagon SDx', 'Intergraph Hexagon SRD', 'CAD systems', 'REST'],
       outcome: [
-        'Implemented a subsystem for engineering data management and engineering document control.',
-        'Implemented workflows for engineering document release and management of 1D, 2D, and 3D data.'
+        'Implemented an engineering document management and engineering data management system covering 1D, 2D, and 3D data.'
       ]
     },
     {
@@ -287,8 +287,7 @@ export const portfolioCases = {
       ],
       technologies: ['Intergraph Hexagon', 'Smart Materials', 'Smart Reference Data', 'REST', 'SOAP', '1C ERP USO', 'Oracle DB'],
       outcome: [
-        'Implemented a procurement and supply chain management system.',
-        'Implemented the integration contour for procurement, logistics, reference data, and handover to operations.'
+        'Implemented a system for procurement, logistics, reference data management, and handover of construction objects to operations.'
       ]
     },
     {
@@ -410,7 +409,7 @@ export const portfolioCases = {
       role: 'Главный специалист',
       contextLine: 'Мосинжпроект · Системный анализ · Строительство',
       summary:
-        'Разработал целевую бизнес-архитектуру и требования к информационной системе управления инжиниринговыми проектами, включая развитие системы технического документооборота и интеграцию с инструментами планирования.',
+        'Разработал целевую бизнес-архитектуру и требования к информационной системе управления инжиниринговыми проектами. Основные блоки системы: управление договорами и затратами проекта, бюджетирование БДР/БДДС, управление портфелем проектов, инженерными данными и выпуском документации, управление ресурсами, календарно-сетевые графики и интеграция с Oracle Primavera.',
       preparedArtifacts: [
         'Целевые бизнес-процессы.',
         'Ролевая модель.',
@@ -434,7 +433,7 @@ export const portfolioCases = {
       sectorLabel: 'Нефтегаз и строительство',
       contextLine: 'НИПИгазпереработка · Нефтегаз и строительство',
       summary:
-        'Разработал архитектуру системы управления инжиниринговыми проектами для нефтегазового строительства с фокусом на точности планирования, сквозном учете материалов и оборудования и интеграции процессов проектирования, поставок и строительства.',
+        'Разработал архитектуру системы управления инжиниринговыми проектами для нефтегазового строительства. Цели проекта: выявление причин срывов сроков строительных работ, повышение точности планирования за счет единого связанного графика (проектная документация, поставки, строительство), создание единой базы МТР для сквозного планирования, повышение контроля договорных обязательств, повышение точности БДР/БДДС и выявление кассовых разрывов.',
       preparedArtifacts: [
         'Функциональные требования.',
         'Архитектура системы.',
@@ -443,8 +442,7 @@ export const portfolioCases = {
       ],
       technologies: ['Oracle Primavera', '1С Бухгалтерия', '1С УХ', '1С ERP', 'AVEVA PDMS', 'CAD-системы', 'SOAP', 'MS SQL'],
       outcome: [
-        'Разработана архитектура системы управления инжиниринговыми проектами для нефтегазового строительства.',
-        'Реализовано: планирование, бюджетирование, казначейство и интеграции со смежными системами.'
+        'Внедрена система управления инжиниринговыми проектами, реализованы планирование, бюджетирование, казначейство, управление НСИ, договорами, актами и интеграции со смежными системами.'
       ]
     },
     {
@@ -456,7 +454,7 @@ export const portfolioCases = {
       sectorLabel: 'Нефтегаз и строительство',
       contextLine: 'ВНИПИнефть · Нефтегаз и строительство',
       summary:
-        'Провел анализ процессов первого и второго уровня и текущего информационного ландшафта компании, предложил меры по оптимизации и реинжинирингу процессов, а также стратегию создания и развития единого информационного пространства для управления производственными процессами проектного института.',
+        'Провел анализ процессов первого и второго уровня и текущего информационного ландшафта компании. Выявил ключевые проблемы: дублирование функций и данных в различных системах, большое количество разнородных информационных систем, противоречивая информация и дублирующие отчеты. Предложил меры по оптимизации и реинжинирингу процессов, а также стратегию создания единого информационного пространства проектного института.',
       preparedArtifacts: [
         'Цели и устав проекта.',
         'Бюджетная модель.',
@@ -465,12 +463,13 @@ export const portfolioCases = {
         'Целевые процессы, диаграммы классов, ER-диаграммы и интеграционные требования.',
         'Экранные формы, методика тестирования и методика внедрения.'
       ],
-      technologies: ['MS SQL', '1С ERP', 'Oracle Primavera', 'AutoCAD', 'Aveva PDMS', 'SOAP'],
+      technologies: ['MS SQL', 'JS', '1С ERP', 'Oracle Primavera', 'AutoCAD', 'Aveva PDMS', 'SOAP'],
       outcome: [
         'Создана единая информационная система управления проектами, ресурсами и инженерным документооборотом.',
         'Реализованы прогнозирование инцидентов на ранней стадии, управление рисками и оценка стоимости и длительности проектных работ.',
         'Сокращены сроки и стоимость проектов, повышено качество проектных работ.',
-        'Системой пользовались около 800 сотрудников; обрабатывалось около 450000 файлов общим объемом 6 ТБ, до 90000 транзакций в месяц при пиковой производительности 25 транзакций в секунду.'
+        'Системой пользовались около 800 сотрудников; обрабатывалось около 450000 файлов общим объемом 6 ТБ, до 90000 транзакций в месяц при пиковой производительности 25 транзакций в секунду.',
+        'Создал «с нуля» сектор разработки и сопровождения (6 сотрудников) на платформе 1С со структурированным процессом поставки: инициация, разработка, опытная эксплуатация и выпуск в продуктив.'
       ]
     },
     {
@@ -482,7 +481,7 @@ export const portfolioCases = {
       sectorLabel: 'Нефтегаз и строительство',
       contextLine: 'Гипровостокнефть · Нефтегаз и строительство',
       summary:
-        'Разработал и внедрил системы для казначейства, бюджетирования, финансового контроля и проектного планирования в проектном институте, включая интеграции с корпоративным порталом и Oracle Primavera.',
+        'Разработал и внедрил системы для казначейства, бюджетирования (БДР, БДДС, инвестиционный бюджет), финансового контроля и проектного планирования в проектном институте. Включая контроллинг с автоматической генерацией задач, аналитическую отчетность с прогнозированием задолженности и анализом «что если», а также интеграции с корпоративным порталом и Oracle Primavera.',
       preparedArtifacts: [
         'Модули казначейства, БДДС, БДР и инвестиционного бюджета.',
         'Функциональные бюджеты по производству, реализации, заработной плате, инвестициям и кредитным линиям.',
@@ -503,6 +502,7 @@ export const portfolioCases = {
       title: 'Управление инженерными данными и инженерный документооборот',
       company: 'Энтер Инжиниринг Россия',
       role: 'Системный аналитик',
+      contextLine: 'Энтер Инжиниринг Россия · Системный анализ · Строительство',
       summary:
         'Подготовил требования и артефакты технического проекта по управлению инженерными данными и инженерному документообороту в промышленном строительстве на базе Intergraph Hexagon.',
       preparedArtifacts: [
@@ -513,8 +513,7 @@ export const portfolioCases = {
       ],
       technologies: ['Intergraph Hexagon SDx', 'Intergraph Hexagon SRD', 'CAD-системы', 'REST'],
       outcome: [
-        'Внедрена система управления инженерными данными и инженерным документооборотом.',
-        'Реализован контур выпуска инженерной документации и управления 1D, 2D и 3D-данными.'
+        'Внедрена система управления инженерным документооборотом и инженерными данными 1D, 2D и 3D.'
       ]
     },
     {
@@ -534,8 +533,7 @@ export const portfolioCases = {
       ],
       technologies: ['Intergraph Hexagon', 'Smart Materials', 'Smart Reference Data', 'REST', 'SOAP', '1C ERP УСО', 'Oracle DB'],
       outcome: [
-        'Внедрена система управления закупками и цепочками поставок.',
-        'Реализован интеграционный контур закупок, логистики, НСИ и передачи в эксплуатацию.'
+        'Реализована система управления закупками, логистикой, НСИ и передачи строительных объектов в эксплуатацию.'
       ]
     },
     {

@@ -75,12 +75,28 @@ function ExperienceCard({ experience, index }) {
 
               {section.items?.length > 0 && (
                 <ul className="space-y-2">
-                  {section.items.map((item, itemIndex) => (
-                    <li key={`${experience.company}-${idx}-item-${itemIndex}`} className="flex items-start gap-3 text-sm leading-relaxed text-foreground">
-                      <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-primary shrink-0"></span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
+                  {section.items.map((item, itemIndex) => {
+                    const text = typeof item === 'string' ? item : item.text;
+                    const subitems = typeof item === 'string' ? null : item.subitems;
+                    return (
+                      <li key={`${experience.company}-${idx}-item-${itemIndex}`} className="text-sm leading-relaxed text-foreground">
+                        <div className="flex items-start gap-3">
+                          <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-primary shrink-0"></span>
+                          <span>{text}</span>
+                        </div>
+                        {subitems?.length > 0 && (
+                          <ul className="ml-6 mt-1.5 space-y-1">
+                            {subitems.map((subitem, subIndex) => (
+                              <li key={`${experience.company}-${idx}-item-${itemIndex}-sub-${subIndex}`} className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground">
+                                <span className="mt-[7px] h-1 w-1 rounded-full bg-muted-foreground/50 shrink-0"></span>
+                                <span>{subitem}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </section>

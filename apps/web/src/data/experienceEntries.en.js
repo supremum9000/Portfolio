@@ -11,9 +11,30 @@ export const experienceEntries = [
       {
         title: 'Projects',
         items: [
-          'Developed a fraud scenario registry with classification across five anomaly types (behavioral, financial, contextual, technical, and client-related), defined detection metrics with threshold values and calculation methods, and outlined risk mitigation measures for the client and the company. Prepared AI-based fraud detection scenarios. Integration with the bank’s fraud prevention system. Prepared requirements for the antifraud system.',
-          'AI voice assistant. Prepared functional requirements, non-functional requirements, CJM, and BPMN diagrams.',
-          'Notification service. Prepared functional requirements, BPMN diagrams, a REST API specification, and C4 L1 architecture artifacts.'
+          {
+            text: 'Fraud detection system',
+            subitems: [
+              'Developed a fraud scenario registry with classification across five anomaly types (behavioral, financial, contextual, technical, and client-related), defined detection metrics with threshold values and calculation methods, and outlined risk mitigation measures for the client and the company. Prepared AI-based fraud detection scenarios. Integration with the bank\'s fraud prevention system. Prepared requirements for the antifraud system.',
+              'Technologies: Kafka, SS7, OCS Forward Fusion, DMS, IBM DataPower, SMS Center, REST.',
+              'Result: developed and implemented an antifraud system integrated with the bank\'s fraud prevention system, reduced fraud risks for clients and the company.'
+            ]
+          },
+          {
+            text: 'AI voice assistant',
+            subitems: [
+              'Prepared functional requirements, non-functional requirements, CJM, and BPMN diagrams.',
+              'Technologies: Just AI, Kafka, Keycloak, S3 MinIO, IBM DataPower, PostgreSQL, MongoDB, REST.',
+              'Result: implemented an AI voice assistant for subscriber interactions.'
+            ]
+          },
+          {
+            text: 'Notification service',
+            subitems: [
+              'Prepared functional requirements, BPMN diagrams, a REST API specification, and C4 L1 architecture artifacts.',
+              'Technologies: REST API, Go, Kafka, PostgreSQL, MongoDB, Microservices.',
+              'Result: developed and implemented a centralized notification service handling all operator communications.'
+            ]
+          }
         ]
       },
       {
@@ -43,17 +64,20 @@ export const experienceEntries = [
     position: 'Lead Systems Analyst',
     sections: [
       {
-        title: 'Project for signing credit bureau consents and other consents at ATMs. Prepared',
+        title: 'Project for signing credit bureau consents and other consents at ATMs',
         items: [
-          'business case and economic effects,',
-          'business requirements,',
-          'functional requirements,',
-          'non-functional requirements,',
-          'integration requirements, REST API design,',
-          'data model (class diagram, ER diagram),',
-          'risk description: calculation of financial impact, risk mitigation measures,',
-          'CJM development,',
-          'MVP preparation.'
+          {
+            text: 'Prepared analytical artifacts',
+            subitems: [
+              'Business case and economic effects.',
+              'Business, functional, non-functional, and integration requirements.',
+              'REST API design, data model (class diagram, ER diagram).',
+              'Risk description: calculation of financial impact, risk mitigation measures.',
+              'CJM development, MVP preparation.'
+            ]
+          },
+          'Technologies: REST API, Java EE, PostgreSQL, Microservices.',
+          'Result: implemented consent signing at ATMs, improved loan issuance to bank clients.'
         ]
       }
     ]
@@ -66,25 +90,28 @@ export const experienceEntries = [
     industries: ['Construction, real estate, operations, design', 'Industrial construction'],
     position: 'Systems Analyst',
     paragraphs: [
-      'Prepared requirements and participated in the implementation of a procurement and supply chain management system for industrial construction based on Intergraph Hexagon + 1C ERP USO.'
+      'Prepared requirements and technical design artifacts for engineering data management and procurement systems for industrial construction.'
     ],
     sections: [
       {
-        title: 'Preparation of the technical design for the system',
+        title: 'Projects',
         items: [
-          'engineering data management (1D, 2D, 3D);',
-          'master and reference data management;',
-          'technical document management;',
-          'procurement and logistics management;',
-          'management of construction work execution and handover to operations.'
-        ]
-      },
-      {
-        title: 'Systems',
-        items: [
-          'SDx - engineering document management system;',
-          'Smart Materials - materials and supply management system + 1C ERP USO;',
-          'Smart Reference Data - master and reference data management system.'
+          {
+            text: 'Engineering data management and document control',
+            subitems: [
+              'Prepared requirements and technical design for engineering data management (1D, 2D, 3D) and technical document management.',
+              'Technologies: Intergraph Hexagon SDx, Intergraph Hexagon SRD, CAD systems, REST.',
+              'Result: implemented an engineering document management and engineering data management system covering 1D, 2D, and 3D data.'
+            ]
+          },
+          {
+            text: 'Procurement and supply chain management',
+            subitems: [
+              'Prepared requirements and technical design for procurement, logistics, master and reference data management, construction work execution and handover to operations.',
+              'Technologies: Intergraph Hexagon, Smart Materials, Smart Reference Data, 1C ERP USO, Oracle DB, REST, SOAP.',
+              'Result: implemented a system for procurement, logistics, reference data management, and handover of construction objects to operations.'
+            ]
+          }
         ]
       }
     ]
@@ -157,17 +184,16 @@ export const experienceEntries = [
       'Energy construction'
     ],
     position: 'Lead Specialist',
+    paragraphs: [
+      'Developed the target business architecture and requirements for an information system for engineering project management.'
+    ],
     sections: [
       {
-        title: 'Project management',
+        title: 'Prepared artifacts',
         items: [
-          'development of the technical document management system.',
-          'implementation of processes and an information system for engineering project management.'
-        ]
-      },
-      {
-        paragraphs: [
-          'Developed the target business architecture and requirements for an information system for engineering project management.'
+          'target business processes, role model, data model;',
+          'functional requirements for the information system;',
+          'test program and methodology, implementation methodology.'
         ]
       },
       {
@@ -180,14 +206,15 @@ export const experienceEntries = [
         ]
       },
       {
-        title: 'Documents prepared during the project',
+        title: 'Technologies',
         items: [
-          'target business processes;',
-          'role model;',
-          'data model;',
-          'functional requirements for the information system;',
-          'test program and methodology;',
-          'implementation methodology.'
+          'Oracle Primavera, 1C PM.'
+        ]
+      },
+      {
+        title: 'Results',
+        items: [
+          'Implemented an engineering project management system with modules for contract management, budgeting, engineering data, resource management, and Oracle Primavera integration.'
         ]
       }
     ]
@@ -225,12 +252,24 @@ export const experienceEntries = [
         ]
       },
       {
-        title: 'Completed work and prepared documents',
+        title: 'Artifacts',
         items: [
           'functional requirements;',
           'system architecture;',
           'integration requirements;',
           'test program and methodology.'
+        ]
+      },
+      {
+        title: 'Technologies',
+        items: [
+          'Oracle Primavera, 1C Accounting, 1C UH, 1C ERP, AVEVA PDMS, CAD systems, SOAP, MS SQL.'
+        ]
+      },
+      {
+        title: 'Results',
+        items: [
+          'Implemented an engineering project management system with planning, budgeting, treasury, reference data management, contracts, acts, and integrations with adjacent systems.'
         ]
       }
     ]

@@ -6,14 +6,14 @@ export const experiencePageContent = {
     metaTitle: 'Experience - Vladimir Belov',
     metaDescription:
       'Work history of Vladimir Belov based on the resume: roles, companies, industries, and key results.',
-    title: 'Experience - 18 years 11 months',
+    title: 'Experience',
     description: 'Full work history based on the resume.'
   },
   ru: {
     metaTitle: 'Опыт работы - Vladimir Belov',
     metaDescription:
       'Опыт работы Владимира Белова в точности по резюме: роли, компании, направления и ключевые результаты.',
-    title: 'Опыт работы - 18 лет 11 месяцев',
+    title: 'Опыт работы',
     description: 'Полная хронология мест работы по резюме.'
   }
 };
