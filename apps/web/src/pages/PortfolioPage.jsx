@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { useSearchParams } from 'react-router-dom';
@@ -23,7 +23,6 @@ function PortfolioPage() {
   const content = portfolioPageContent[locale] ?? portfolioPageContent[DEFAULT_LOCALE];
   const localizedCases = portfolioCases[locale] ?? portfolioCases[DEFAULT_LOCALE];
   const [searchParams, setSearchParams] = useSearchParams();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const currentCaseId = searchParams.get('case');
   const currentSectorId = searchParams.get('sector');
   const selectedSectorId = portfolioSectorIds.has(currentSectorId)
@@ -162,50 +161,101 @@ function PortfolioPage() {
                 })}
               </div>
 
-              <div className="grid gap-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start">
-                <div className="lg:sticky lg:top-24">
-                  {/* Mobile accordion trigger */}
-                  <div className="lg:hidden">
-                    <button
-                      type="button"
-                      className="flex w-full items-center justify-between rounded-xl border border-primary/10 bg-card p-4 shadow"
-                      onClick={() => setMobileMenuOpen((prev) => !prev)}
-                    >
-                      <div className="text-left">
-                        <div className="text-xs text-muted-foreground">{content.menuTitle}</div>
-                        <div className="font-semibold">{selectedCase.title} <span className="font-normal text-muted-foreground">· {selectedCase.company}</span></div>
-                      </div>
-                      <ChevronDown className={cn('ml-2 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200', mobileMenuOpen && 'rotate-180')} />
-                    </button>
-                    {mobileMenuOpen && (
-                      <div className="mt-2 flex flex-col gap-1.5">
-                        {filteredCases.map((portfolioCase) => {
-                          const isActive = portfolioCase.id === activeCaseId;
+              {/* Mobile: inline accordion */}
+              <div className="flex flex-col gap-3 lg:hidden">
+                {filteredCases.map((portfolioCase) => {
+                  const isActive = portfolioCase.id === activeCaseId;
+                  const caseContextLine = [
+                    portfolioCase.company,
+                    portfolioCase.sectorLabel ?? portfolioCase.sectors
+                      ?.filter((s) => s !== defaultPortfolioSectorId)
+                      .map((s) => content.sectors[s])
+                      .filter(Boolean)
+                      .join(' / ')
+                  ].filter(Boolean).join(' · ');
 
-                          return (
-                            <button
-                              key={portfolioCase.id}
-                              type="button"
-                              onClick={() => { handleCaseSelect(portfolioCase.id); setMobileMenuOpen(false); }}
-                              className={cn(
-                                'rounded-lg border px-3 py-2.5 text-left transition-all duration-200',
-                                isActive
-                                  ? 'border-primary bg-primary/10 text-foreground'
-                                  : 'border-border bg-card hover:border-primary/40 hover:bg-muted'
-                              )}
-                              aria-pressed={isActive}
-                            >
-                              <span className="font-medium">{portfolioCase.title}</span>
-                              <span className="ml-1.5 text-sm text-muted-foreground">· {portfolioCase.company}</span>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    )}
-                  </div>
+                  return (
+                    <div key={portfolioCase.id}>
+                      <button
+                        type="button"
+                        onClick={() => handleCaseSelect(portfolioCase.id)}
+                        className={cn(
+                          'flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left transition-all duration-200',
+                          isActive
+                            ? 'border-primary bg-primary/10 text-foreground shadow-sm'
+                            : 'border-border bg-card hover:border-primary/40 hover:bg-muted'
+                        )}
+                        aria-pressed={isActive}
+                      >
+                        <div>
+                          <div className="font-semibold">{portfolioCase.title}</div>
+                          <div className="mt-0.5 text-sm text-muted-foreground">{portfolioCase.company}</div>
+                        </div>
+                        <ChevronDown className={cn('ml-2 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200', isActive && 'rotate-180')} />
+                      </button>
 
-                  {/* Desktop sidebar */}
-                  <Card className="hidden border-primary/10 lg:block">
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          transition={{ duration: 0.25 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="mt-3 space-y-6 rounded-xl border border-primary/10 bg-card p-4 shadow-lg">
+                            <div className="flex items-start gap-3 text-sm text-muted-foreground">
+                              <Building2 className="mt-0.5 h-4 w-4 text-primary" />
+                              <span>{caseContextLine}</span>
+                            </div>
+
+                            <section className="space-y-2">
+                              <h2 className="text-lg font-semibold">{content.sections.description}</h2>
+                              <p className="text-sm leading-relaxed text-muted-foreground">
+                                {portfolioCase.summary}
+                              </p>
+                            </section>
+
+                            {portfolioCase.preparedArtifacts?.length ? (
+                              <section className="space-y-2">
+                                <h2 className="text-lg font-semibold">{content.sections.preparedArtifacts}</h2>
+                                <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground marker:text-primary">
+                                  {portfolioCase.preparedArtifacts.map((item) => (
+                                    <li key={`m-artifact-${item}`}>{item}</li>
+                                  ))}
+                                </ul>
+                              </section>
+                            ) : null}
+
+                            {portfolioCase.technologies?.length ? (
+                              <section className="space-y-2">
+                                <h2 className="text-lg font-semibold">{content.sections.technologies}</h2>
+                                <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground marker:text-primary">
+                                  {portfolioCase.technologies.map((item) => (
+                                    <li key={`m-tech-${item}`}>{item}</li>
+                                  ))}
+                                </ul>
+                              </section>
+                            ) : null}
+
+                            <section className="space-y-2">
+                              <h2 className="text-lg font-semibold">{content.sections.outcome}</h2>
+                              <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground marker:text-primary">
+                                {portfolioCase.outcome.map((item) => (
+                                  <li key={`m-outcome-${item}`}>{item}</li>
+                                ))}
+                              </ul>
+                            </section>
+                          </div>
+                        </motion.div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Desktop: sidebar + detail card */}
+              <div className="hidden gap-8 lg:grid lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start">
+                <div className="sticky top-24">
+                  <Card className="border-primary/10">
                     <CardHeader className="pb-4">
                       <CardTitle className="text-xl">{content.menuTitle}</CardTitle>
                     </CardHeader>
