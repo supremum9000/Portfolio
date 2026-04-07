@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { useSearchParams } from 'react-router-dom';
-import { Building2 } from 'lucide-react';
+import { Building2, ChevronDown } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -23,6 +23,7 @@ function PortfolioPage() {
   const content = portfolioPageContent[locale] ?? portfolioPageContent[DEFAULT_LOCALE];
   const localizedCases = portfolioCases[locale] ?? portfolioCases[DEFAULT_LOCALE];
   const [searchParams, setSearchParams] = useSearchParams();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const currentCaseId = searchParams.get('case');
   const currentSectorId = searchParams.get('sector');
   const selectedSectorId = portfolioSectorIds.has(currentSectorId)
@@ -164,10 +165,21 @@ function PortfolioPage() {
               <div className="grid gap-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start">
                 <div className="lg:sticky lg:top-24">
                   <Card className="border-primary/10">
-                    <CardHeader className="pb-4">
+                    <button
+                      type="button"
+                      className="flex w-full items-center justify-between p-4 lg:hidden"
+                      onClick={() => setMobileMenuOpen((prev) => !prev)}
+                    >
+                      <div className="text-left">
+                        <div className="text-sm text-muted-foreground">{content.menuTitle}</div>
+                        <div className="font-semibold">{selectedCase.title}</div>
+                      </div>
+                      <ChevronDown className={cn('h-5 w-5 text-muted-foreground transition-transform duration-200', mobileMenuOpen && 'rotate-180')} />
+                    </button>
+                    <CardHeader className="hidden pb-4 lg:flex">
                       <CardTitle className="text-xl">{content.menuTitle}</CardTitle>
                     </CardHeader>
-                    <CardContent className="pt-0">
+                    <CardContent className={cn('pt-0', mobileMenuOpen ? 'block' : 'hidden lg:block')}>
                       <div className="flex flex-col gap-2 lg:gap-3">
                         {filteredCases.map((portfolioCase) => {
                           const isActive = portfolioCase.id === activeCaseId;
@@ -176,7 +188,7 @@ function PortfolioPage() {
                             <button
                               key={portfolioCase.id}
                               type="button"
-                              onClick={() => handleCaseSelect(portfolioCase.id)}
+                              onClick={() => { handleCaseSelect(portfolioCase.id); setMobileMenuOpen(false); }}
                               className={cn(
                                 'rounded-xl border px-3 py-3 text-left transition-all duration-200 lg:px-4 lg:py-4',
                                 isActive
