@@ -75,7 +75,7 @@ export const contactContent = {
     metaTitle: 'Aloqa - Vladimir Belov',
     metaDescription:
       'Vladimir Belov bilan tizim tahlili, biznes tahlili, korporativ arxitektura, antifraud yechimlari va talablarni ishlab chiqish bo\'yicha bog\'lanish.',
-    title: 'Bog\'lanish',
+    title: 'Aloqa',
     description:
       'Tizim tahlili, biznes tahlili, korporativ arxitektura, antifraud yechimlari va talablarni ishlab chiqish sohasida yangi lavozimlar, loyihalar va kasbiy hamkorlikni muhokama qilishga tayyorman.',
     infoTitle: 'Aloqa ma\'lumotlari',
