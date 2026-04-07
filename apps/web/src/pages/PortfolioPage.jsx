@@ -65,7 +65,7 @@ function PortfolioPage() {
       shouldReplace = true;
     }
 
-    if (selectedCase && currentCaseId !== selectedCase.id) {
+    if (currentCaseId && selectedCase && currentCaseId !== selectedCase.id) {
       nextParams.set('case', selectedCase.id);
       shouldReplace = true;
     }
@@ -84,7 +84,11 @@ function PortfolioPage() {
 
   const handleCaseSelect = (caseId) => {
     const nextParams = new URLSearchParams(searchParams);
-    nextParams.set('case', caseId);
+    if (caseId === currentCaseId) {
+      nextParams.delete('case');
+    } else {
+      nextParams.set('case', caseId);
+    }
     setSearchParams(nextParams);
   };
 
@@ -164,7 +168,7 @@ function PortfolioPage() {
               {/* Mobile: inline accordion */}
               <div className="flex flex-col gap-3 lg:hidden">
                 {filteredCases.map((portfolioCase) => {
-                  const isActive = portfolioCase.id === activeCaseId;
+                  const isActive = portfolioCase.id === currentCaseId;
                   const caseContextLine = [
                     portfolioCase.company,
                     portfolioCase.sectorLabel ?? portfolioCase.sectors
