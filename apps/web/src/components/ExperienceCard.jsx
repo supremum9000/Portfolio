@@ -9,11 +9,11 @@ function ExperienceCard({ experience, index }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative pl-8 pb-12 border-l-2 border-primary/30 last:pb-0"
+      className="relative pl-6 pb-12 border-l-2 border-primary/30 last:pb-0 sm:pl-8"
     >
       <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-background"></div>
       
-      <div className="bg-card rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+      <div className="bg-card rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 sm:p-6">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
           <div>
             <h3 className="text-xl font-semibold text-foreground mb-1">

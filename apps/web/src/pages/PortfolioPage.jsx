@@ -168,7 +168,7 @@ function PortfolioPage() {
                       <CardTitle className="text-xl">{content.menuTitle}</CardTitle>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <div className="flex gap-3 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0">
+                      <div className="flex flex-col gap-2 lg:gap-3">
                         {filteredCases.map((portfolioCase) => {
                           const isActive = portfolioCase.id === activeCaseId;
 
@@ -178,7 +178,7 @@ function PortfolioPage() {
                               type="button"
                               onClick={() => handleCaseSelect(portfolioCase.id)}
                               className={cn(
-                                'min-w-[220px] rounded-xl border px-4 py-4 text-left transition-all duration-200 lg:min-w-0',
+                                'rounded-xl border px-3 py-3 text-left transition-all duration-200 lg:px-4 lg:py-4',
                                 isActive
                                   ? 'border-primary bg-primary/10 text-foreground shadow-sm'
                                   : 'border-border bg-background hover:border-primary/40 hover:bg-muted'
@@ -186,7 +186,7 @@ function PortfolioPage() {
                               aria-pressed={isActive}
                             >
                               <div className="font-semibold">{portfolioCase.title}</div>
-                              <div className="mt-1 text-sm text-muted-foreground">
+                              <div className="mt-0.5 text-sm text-muted-foreground lg:mt-1">
                                 {portfolioCase.company}
                               </div>
                             </button>
@@ -209,7 +209,7 @@ function PortfolioPage() {
                         <Building2 className="mt-0.5 h-4 w-4 text-primary" />
                         <span>{selectedCaseContextLine}</span>
                       </div>
-                      <CardTitle className="text-3xl leading-tight md:text-4xl">
+                      <CardTitle className="text-2xl leading-tight sm:text-3xl md:text-4xl">
                         {selectedCase.title}
                       </CardTitle>
                     </CardHeader>

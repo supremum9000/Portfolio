@@ -37,7 +37,7 @@ function AboutPage() {
                 {content.title}
               </h1>
 
-              <div className="mb-8 rounded-2xl bg-card p-8 shadow-lg">
+              <div className="mb-8 rounded-2xl bg-card p-4 shadow-lg sm:p-8">
                 <div className="mb-8 flex flex-wrap gap-6 text-sm">
                   <div className="flex items-center gap-2">
                     <Briefcase className="h-5 w-5 text-primary" />
