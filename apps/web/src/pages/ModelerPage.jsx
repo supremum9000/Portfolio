@@ -5,7 +5,7 @@ import Header from '@/components/Header.jsx';
 import { useLocale } from '@/i18n/LocaleContext';
 import { buildLocalizedPath, CONTENT_PATHS } from '@/i18n/config';
 
-const MODELER_SRC = '/tools/bpmn-er-modeler/index.html';
+const MODELER_SRC = `${import.meta.env.BASE_URL}tools/bpmn-er-modeler/index.html`;
 
 const pageContent = {
   en: {
