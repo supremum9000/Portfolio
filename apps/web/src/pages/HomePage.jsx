@@ -31,16 +31,8 @@ function HomePage() {
         <Header />
 
         <main className="flex-1">
-          <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
-            <div className="absolute inset-0 z-0">
-              <img
-                src="https://images.unsplash.com/photo-1587637721784-024d2b51e1dd"
-                alt={content.imageAlt}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background"></div>
-            </div>
-
+          <section className="relative min-h-[100dvh] flex items-center justify-center">
+            <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background"></div>
             <div className="relative z-10 container mx-auto px-4 text-center sm:px-6 lg:px-8">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}

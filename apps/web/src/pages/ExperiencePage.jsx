@@ -20,7 +20,8 @@ function ExperiencePage() {
         <meta name="description" content={content.metaDescription} />
       </Helmet>
 
-      <div className="min-h-screen flex flex-col">
+      <div className="relative min-h-screen flex flex-col">
+        <div className="fixed inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background -z-10"></div>
         <Header />
 
         <main className="flex-1 py-20">
