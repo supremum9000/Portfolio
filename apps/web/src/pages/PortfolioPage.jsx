@@ -108,9 +108,7 @@ function PortfolioPage() {
       nextParams.set('sector', sectorId);
     }
 
-    if (nextSelectedCase) {
-      nextParams.set('case', nextSelectedCase.id);
-    }
+    nextParams.delete('case');
 
     setSearchParams(nextParams);
   };
