@@ -609,7 +609,7 @@ function erExportPDF(){
   if(!result)return toast('❌','Нет диаграммы');
   var win=window.open('','_blank');
   if(!win)return toast('❌','Popup заблокирован');
-  var pdfTitle=(typeof getModelerLocale==='function'&&getModelerLocale()==='en')?'ER Diagram — PDF':'ER-диаграмма — PDF';
+  var pdfTitle=(typeof getModelerLocale==='function'&&getModelerLocale()!=='ru')?'ER Diagram — PDF':'ER-диаграмма — PDF';
   win.document.write('<!DOCTYPE html><html><head><title>'+pdfTitle+'</title><style>@page{size:landscape;margin:10mm}body{margin:0;display:flex;align-items:center;justify-content:center;min-height:100vh}</style></head><body>');
   win.document.write(result.svg);
   win.document.write('</body></html>');
