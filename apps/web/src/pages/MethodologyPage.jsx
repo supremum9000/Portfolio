@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Layers3 } from 'lucide-react';
+import { ChevronDown, Layers3 } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
@@ -28,7 +28,7 @@ function MethodologyPage() {
     content.directions[0];
 
   useEffect(() => {
-    if (selectedDirection && currentDirectionId !== selectedDirection.id) {
+    if (currentDirectionId && selectedDirection && currentDirectionId !== selectedDirection.id) {
       const nextParams = new URLSearchParams(searchParams);
       nextParams.set('direction', selectedDirection.id);
       setSearchParams(nextParams, { replace: true });
@@ -37,7 +37,11 @@ function MethodologyPage() {
 
   const handleDirectionSelect = (directionId) => {
     const nextParams = new URLSearchParams(searchParams);
-    nextParams.set('direction', directionId);
+    if (directionId === currentDirectionId) {
+      nextParams.delete('direction');
+    } else {
+      nextParams.set('direction', directionId);
+    }
     setSearchParams(nextParams);
   };
 
@@ -71,14 +75,86 @@ function MethodologyPage() {
                 </p>
               </div>
 
-              <div className="grid gap-8 lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
-                <div className="lg:sticky lg:top-24">
+              {/* Mobile: inline accordion */}
+              <div className="flex flex-col gap-3 lg:hidden">
+                {content.directions.map((direction) => {
+                  const isActive = direction.id === currentDirectionId;
+
+                  return (
+                    <div key={direction.id}>
+                      <button
+                        type="button"
+                        onClick={() => handleDirectionSelect(direction.id)}
+                        className={cn(
+                          'flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left transition-all duration-200',
+                          isActive
+                            ? 'border-primary bg-primary/10 text-foreground shadow-sm'
+                            : 'border-border bg-card hover:border-primary/40 hover:bg-muted'
+                        )}
+                        aria-pressed={isActive}
+                      >
+                        <div className="font-semibold leading-snug">{direction.menuTitle}</div>
+                        <ChevronDown className={cn('ml-2 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200', isActive && 'rotate-180')} />
+                      </button>
+
+                      {isActive && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          transition={{ duration: 0.25 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="mt-3 space-y-4 rounded-xl border border-primary/10 bg-card p-4 shadow-lg">
+                            <h2 className="text-xl font-semibold leading-snug">{direction.title}</h2>
+
+                            <div className="flex items-center gap-3">
+                              <div className="rounded-lg bg-primary/10 p-2">
+                                <Layers3 className="h-5 w-5 text-primary" />
+                              </div>
+                              <h3 className="text-lg font-semibold">{content.topicsTitle}</h3>
+                            </div>
+
+                            {direction.topicBlocks ? (
+                              <div className="space-y-5">
+                                {direction.topicBlocks.map((block) => (
+                                  <section key={block.title} className="space-y-2">
+                                    <h4 className="text-base font-semibold leading-snug text-foreground">
+                                      {block.title}
+                                    </h4>
+                                    {block.items?.length ? (
+                                      <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground marker:text-primary">
+                                        {block.items.map((item) => (
+                                          <li key={`m-${block.title}-${item}`}>{item}</li>
+                                        ))}
+                                      </ul>
+                                    ) : null}
+                                  </section>
+                                ))}
+                              </div>
+                            ) : (
+                              <ul className="list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-muted-foreground marker:text-primary">
+                                {direction.topics.map((topic) => (
+                                  <li key={`m-${topic}`}>{topic}</li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        </motion.div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Desktop: sidebar + detail card */}
+              <div className="hidden gap-8 lg:grid lg:grid-cols-[320px_minmax(0,1fr)] lg:items-start">
+                <div className="sticky top-24">
                   <Card className="border-primary/10">
                     <CardHeader className="pb-4">
                       <CardTitle className="text-xl">{content.menuTitle}</CardTitle>
                     </CardHeader>
                     <CardContent className="pt-0">
-                      <div className="flex gap-3 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0">
+                      <div className="flex flex-col gap-3">
                         {content.directions.map((direction) => {
                           const isActive = direction.id === selectedDirection.id;
 
@@ -88,7 +164,7 @@ function MethodologyPage() {
                               type="button"
                               onClick={() => handleDirectionSelect(direction.id)}
                               className={cn(
-                                'min-w-[240px] rounded-xl border px-4 py-4 text-left transition-all duration-200 lg:min-w-0',
+                                'rounded-xl border px-4 py-4 text-left transition-all duration-200',
                                 isActive
                                   ? 'border-primary bg-primary/10 text-foreground shadow-sm'
                                   : 'border-border bg-background hover:border-primary/40 hover:bg-muted'
