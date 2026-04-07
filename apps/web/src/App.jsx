@@ -62,9 +62,11 @@ function LocaleNotFoundRedirect() {
   return <Navigate to={target} replace />;
 }
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 function App() {
   return (
-    <Router>
+    <Router basename={basename}>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LegacyRedirect />} />
