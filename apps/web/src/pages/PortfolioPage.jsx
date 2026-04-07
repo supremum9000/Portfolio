@@ -164,23 +164,21 @@ function PortfolioPage() {
 
               <div className="grid gap-8 lg:grid-cols-[280px_minmax(0,1fr)] lg:items-start">
                 <div className="lg:sticky lg:top-24">
-                  <Card className="border-primary/10">
+                  {/* Mobile accordion trigger */}
+                  <div className="lg:hidden">
                     <button
                       type="button"
-                      className="flex w-full items-center justify-between p-4 lg:hidden"
+                      className="flex w-full items-center justify-between rounded-xl border border-primary/10 bg-card p-4 shadow"
                       onClick={() => setMobileMenuOpen((prev) => !prev)}
                     >
                       <div className="text-left">
-                        <div className="text-sm text-muted-foreground">{content.menuTitle}</div>
-                        <div className="font-semibold">{selectedCase.title}</div>
+                        <div className="text-xs text-muted-foreground">{content.menuTitle}</div>
+                        <div className="font-semibold">{selectedCase.title} <span className="font-normal text-muted-foreground">· {selectedCase.company}</span></div>
                       </div>
-                      <ChevronDown className={cn('h-5 w-5 text-muted-foreground transition-transform duration-200', mobileMenuOpen && 'rotate-180')} />
+                      <ChevronDown className={cn('ml-2 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200', mobileMenuOpen && 'rotate-180')} />
                     </button>
-                    <CardHeader className="hidden pb-4 lg:flex">
-                      <CardTitle className="text-xl">{content.menuTitle}</CardTitle>
-                    </CardHeader>
-                    <CardContent className={cn('pt-0', mobileMenuOpen ? 'block' : 'hidden lg:block')}>
-                      <div className="flex flex-col gap-2 lg:gap-3">
+                    {mobileMenuOpen && (
+                      <div className="mt-2 flex flex-col gap-1.5">
                         {filteredCases.map((portfolioCase) => {
                           const isActive = portfolioCase.id === activeCaseId;
 
@@ -190,7 +188,39 @@ function PortfolioPage() {
                               type="button"
                               onClick={() => { handleCaseSelect(portfolioCase.id); setMobileMenuOpen(false); }}
                               className={cn(
-                                'rounded-xl border px-3 py-3 text-left transition-all duration-200 lg:px-4 lg:py-4',
+                                'rounded-lg border px-3 py-2.5 text-left transition-all duration-200',
+                                isActive
+                                  ? 'border-primary bg-primary/10 text-foreground'
+                                  : 'border-border bg-card hover:border-primary/40 hover:bg-muted'
+                              )}
+                              aria-pressed={isActive}
+                            >
+                              <span className="font-medium">{portfolioCase.title}</span>
+                              <span className="ml-1.5 text-sm text-muted-foreground">· {portfolioCase.company}</span>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Desktop sidebar */}
+                  <Card className="hidden border-primary/10 lg:block">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-xl">{content.menuTitle}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="flex flex-col gap-3">
+                        {filteredCases.map((portfolioCase) => {
+                          const isActive = portfolioCase.id === activeCaseId;
+
+                          return (
+                            <button
+                              key={portfolioCase.id}
+                              type="button"
+                              onClick={() => handleCaseSelect(portfolioCase.id)}
+                              className={cn(
+                                'rounded-xl border px-4 py-4 text-left transition-all duration-200',
                                 isActive
                                   ? 'border-primary bg-primary/10 text-foreground shadow-sm'
                                   : 'border-border bg-background hover:border-primary/40 hover:bg-muted'
@@ -198,7 +228,7 @@ function PortfolioPage() {
                               aria-pressed={isActive}
                             >
                               <div className="font-semibold">{portfolioCase.title}</div>
-                              <div className="mt-0.5 text-sm text-muted-foreground lg:mt-1">
+                              <div className="mt-1 text-sm text-muted-foreground">
                                 {portfolioCase.company}
                               </div>
                             </button>
