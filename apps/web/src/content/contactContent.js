@@ -5,7 +5,7 @@ export const contactContent = {
       'Get in touch with Vladimir Belov regarding systems analysis, business analysis, enterprise architecture, antifraud solutions, and requirements development.',
     title: 'Get in touch',
     description:
-      'I am open to discussing new roles, projects, and professional collaboration in systems analysis, business analysis, enterprise architecture, antifraud solutions, and requirements work.',
+      'I am open to new projects and collaboration in systems analysis, business analysis, enterprise architecture, antifraud solutions, and requirements work.',
     infoTitle: 'Contact information',
     emailLabel: 'Email',
     networkLabel: 'Professional network',
@@ -38,7 +38,7 @@ export const contactContent = {
       'Связаться с Владимиром Беловым по вопросам системного анализа, бизнес-анализа, корпоративной архитектуры, антифрод-решений и подготовки требований.',
     title: 'Связаться',
     description:
-      'Открыт к обсуждению новых ролей, проектов и профессионального сотрудничества в области системного и бизнес-анализа, корпоративной архитектуры, антифрод-решений и подготовки требований.',
+      'Открыт к новым проектам и сотрудничеству в области системного и бизнес-анализа, корпоративной архитектуры, антифрод-решений и подготовки требований.',
     infoTitle: 'Контактная информация',
     emailLabel: 'Email',
     networkLabel: 'Профессиональная сеть',
@@ -71,7 +71,7 @@ export const contactContent = {
       'Vladimir Belov bilan tizim tahlili, biznes tahlili, korporativ arxitektura, antifraud yechimlari va talablarni ishlab chiqish bo\'yicha bog\'lanish.',
     title: 'Aloqa',
     description:
-      'Tizim tahlili, biznes tahlili, korporativ arxitektura, antifraud yechimlari va talablarni ishlab chiqish sohasida yangi lavozimlar, loyihalar va kasbiy hamkorlikni muhokama qilishga tayyorman.',
+      'Tizim tahlili, biznes tahlili, korporativ arxitektura, antifraud yechimlari va talablarni ishlab chiqish sohasida yangi loyihalar va hamkorlikka ochiqman.',
     infoTitle: 'Aloqa ma\'lumotlari',
     emailLabel: 'Email',
     networkLabel: 'Kasbiy tarmoq',
