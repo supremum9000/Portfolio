@@ -14,7 +14,7 @@ function LanguageSwitcher({ className }) {
       role="group"
       aria-label={ui.actions.switchLanguage}
     >
-      {SUPPORTED_LOCALES.map((targetLocale) => {
+      {SUPPORTED_LOCALES.filter((l) => l !== 'uz').map((targetLocale) => {
         const isActive = targetLocale === locale;
 
         return (
