@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Send } from 'lucide-react';
+import { Mail, Send } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { contactContent } from '@/content/contactContent';
@@ -81,15 +81,6 @@ function ContactPage() {
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-4">
-                      <div className="rounded-lg bg-primary/10 p-3">
-                        <MapPin className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="mb-1 font-medium">{content.locationLabel}</h3>
-                        <p className="text-muted-foreground">{content.locationValue}</p>
-                      </div>
-                    </div>
                   </div>
                 </motion.div>
               </div>
