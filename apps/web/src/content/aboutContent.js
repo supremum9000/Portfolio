@@ -7,7 +7,7 @@ export const aboutContent = {
     facts: {
       age: 'Age: 48',
       emailLabel: 'Email',
-      relocation: 'Relocation: Uzbekistan'
+      relocation: 'Uzbekistan'
     },
     paragraphs: [
       'I have 18+ years of experience designing information systems for fintech, telecom, oil and gas, and construction. My work focuses on systems analysis, business analysis, enterprise architecture, and requirements development.'
@@ -42,7 +42,7 @@ export const aboutContent = {
     facts: {
       age: 'Возраст: 48',
       emailLabel: 'Email',
-      relocation: 'Готов к переезду: Узбекистан'
+      relocation: 'Узбекистан'
     },
     paragraphs: [
       '18+ лет опыта в проектировании информационных систем для финтеха, телекома, нефтегазовой и строительной отраслей. Специализируюсь на системном и бизнес-анализе, корпоративной архитектуре и подготовке требований.'
@@ -77,7 +77,7 @@ export const aboutContent = {
     facts: {
       age: 'Yoshi: 48',
       emailLabel: 'Email',
-      relocation: 'Ko\'chishga tayyor: O\'zbekiston'
+      relocation: 'O\'zbekiston'
     },
     paragraphs: [
       'Fintech, telekommunikatsiya, neft-gaz va qurilish sohalari uchun axborot tizimlarini loyihalashda 18+ yillik tajribam bor. Tizim tahlili, biznes tahlili, korporativ arxitektura va talablarni ishlab chiqishga ixtisoslashganman.'

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import { contactContent } from '@/content/contactContent';
@@ -56,10 +56,27 @@ function ContactPage() {
                       <div>
                         <h3 className="mb-1 font-medium">{content.emailLabel}</h3>
                         <a
-                          href="mailto:supremum7000@proton.me"
+                          href="mailto:supremum9000@gmail.com"
                           className="text-primary hover:underline"
                         >
-                          supremum7000@proton.me
+                          supremum9000@gmail.com
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="rounded-lg bg-primary/10 p-3">
+                        <Send className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="mb-1 font-medium">Telegram</h3>
+                        <a
+                          href="https://t.me/supremum9000"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-primary hover:underline"
+                        >
+                          @supremum9000
                         </a>
                       </div>
                     </div>
@@ -71,7 +88,6 @@ function ContactPage() {
                       <div>
                         <h3 className="mb-1 font-medium">{content.locationLabel}</h3>
                         <p className="text-muted-foreground">{content.locationValue}</p>
-                        <p className="text-sm text-muted-foreground">{content.relocationValue}</p>
                       </div>
                     </div>
                   </div>

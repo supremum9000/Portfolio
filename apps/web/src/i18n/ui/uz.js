@@ -21,7 +21,7 @@ export default {
   footer: {
     rightsReserved: 'Barcha huquqlar himoyalangan.',
     email: 'Email',
-    linkedin: 'LinkedIn',
+    telegram: 'Telegram',
     github: 'GitHub'
   }
 };

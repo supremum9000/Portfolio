@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Mail, Send } from 'lucide-react';
 import { useLocale } from '@/i18n/LocaleContext';
 
 function Footer() {
@@ -15,18 +15,20 @@ function Footer() {
 
           <div className="flex items-center gap-6">
             <a
-              href="mailto:supremum7000@proton.me"
+              href="mailto:supremum9000@gmail.com"
               className="text-muted-foreground transition-colors duration-200 hover:text-primary"
               aria-label={ui.footer.email}
             >
               <Mail className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://t.me/supremum9000"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground transition-colors duration-200 hover:text-primary"
-              aria-label={ui.footer.linkedin}
+              aria-label={ui.footer.telegram}
             >
-              <Linkedin className="h-5 w-5" />
+              <Send className="h-5 w-5" />
             </a>
             <a
               href="#"
@@ -39,10 +41,10 @@ function Footer() {
 
           <div className="text-sm">
             <a
-              href="mailto:supremum7000@proton.me"
+              href="mailto:supremum9000@gmail.com"
               className="transition-colors duration-200 hover:text-primary"
             >
-              supremum7000@proton.me
+              supremum9000@gmail.com
             </a>
           </div>
         </div>
